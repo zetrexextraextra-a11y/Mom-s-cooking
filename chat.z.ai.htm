@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكل ماما — أكل بيتي لحد باب شقتك</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='26' fill='%23F4E4C6'/%3E%3Crect x='28' y='16' width='8' height='9' rx='3' fill='%23D14B24' stroke='%232A1B12' stroke-width='2'/%3E%3Cellipse cx='32' cy='27' rx='17' ry='4.5' fill='%23EFB03F' stroke='%232A1B12' stroke-width='2.5'/%3E%3Cpath d='M15 31h34v11a13 13 0 0 1-13 13h-8a13 13 0 0 1-13-13z' fill='%23D14B24' stroke='%232A1B12' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --cream:#FAF1E1; --paper:#FFFBEF; --card:#FFFDF6;
+  --ink:#2A1B12; --ink2:#6E5A48; --line:#E7D8BC; --line2:#D9C5A0;
+  --terra:#D14B24; --terra-d:#B03A17; --terra-soft:#F7DCCF;
+  --gold:#EFB03F; --gold-soft:#F8E3B8;
+  --olive:#63773B; --olive-soft:#E4EBD3;
+  --wa:#1FA855; --r:18px;
+  --sh:4px 4px 0 var(--ink); --sh-sm:3px 3px 0 var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+::selection{background:var(--gold)}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans Arabic',sans-serif; color:var(--ink); background:var(--cream);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Ccircle cx='2' cy='2' r='1.3' fill='%23EADDC2'/%3E%3C/svg%3E");
+  padding-bottom:120px; line-height:1.6;
+}
+.lz{font-family:'Lalezar',cursive;font-weight:400;letter-spacing:.2px}
+button{font-family:inherit}
+img{display:block}
+body.lock{overflow:hidden}
+
+/* =========== الهيدر =========== */
+header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:2px solid var(--ink);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo-mark{width:44px;height:44px;flex-shrink:0}
+.logo-mark .stm path{transform-box:fill-box;transform-origin:50% 100%;animation:steam 2.6s ease-in-out infinite;opacity:0}
+.logo-mark .stm path:nth-of-type(2){animation-delay:.8s}
+.brand-tx b{font-family:'Lalezar';font-weight:400;font-size:1.45rem;color:var(--terra);line-height:1;display:block}
+.brand-tx small{font-size:.6rem;letter-spacing:.22em;color:var(--ink2);font-weight:700}
+.hd-actions{display:flex;align-items:center;gap:10px}
+.me-chip{display:flex;align-items:center;gap:8px;background:var(--paper);border:2px solid var(--ink);border-radius:999px;padding:4px 12px 4px 4px;cursor:pointer;box-shadow:var(--sh-sm);font:inherit;font-weight:700}
+[dir=ltr] .me-chip{padding:4px 4px 4px 12px}
+.me-av{width:30px;height:30px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:'Lalezar'}
+.me-name{font-size:.85rem;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* =========== أزرار =========== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:700;padding:11px 20px;border-radius:999px;border:2px solid var(--ink);background:var(--terra);color:var(--paper);cursor:pointer;box-shadow:var(--sh-sm);text-decoration:none;transition:transform .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}
+.btn-ghost{background:var(--paper);color:var(--ink)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-sm{padding:7px 13px;font-size:.85rem}
+.icon-btn{position:relative;width:42px;height:42px;border-radius:12px;border:2px solid var(--ink);background:var(--paper);display:grid;place-items:center;font-size:1.25rem;cursor:pointer;box-shadow:var(--sh-sm);color:var(--ink);transition:transform .15s,box-shadow .15s;text-decoration:none}
+.icon-btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.icon-btn:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}
+.lang-btn{height:42px;padding:0 14px;border-radius:12px;border:2px solid var(--ink);background:var(--gold);font-weight:700;cursor:pointer;box-shadow:var(--sh-sm);font-size:.95rem}
+.badge{position:absolute;top:-7px;inset-inline-end:-7px;min-width:20px;height:20px;border-radius:999px;background:var(--terra);color:#fff;font-size:.68rem;font-weight:700;display:grid;place-items:center;border:2px solid var(--ink);padding:0 4px;z-index:2}
+.badge.hide{display:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* =========== النافيجيشن السفلي =========== */
+.bnav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:60;display:flex;gap:2px;background:var(--ink);padding:7px;border-radius:999px;box-shadow:0 10px 26px rgba(42,27,18,.3)}
+.bn{border:0;background:transparent;color:#CBB59B;font:inherit;font-size:.64rem;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:1px;padding:3px 13px;border-radius:999px;cursor:pointer;position:relative}
+.bn i{font-size:1.35rem;line-height:1;padding:4px 15px;border-radius:999px;transition:.2s}
+.bn.active{color:var(--cream)}
+.bn.active i{background:var(--terra);color:#fff}
+.bn .badge{top:-2px;inset-inline-end:2px}
+
+/* =========== العروض =========== */
+main{max-width:1120px;margin-inline:auto;padding:0 18px}
+.view{display:none}
+.view.active{display:block;animation:viewIn .4s cubic-bezier(.2,.8,.2,1)}
+@keyframes viewIn{from{opacity:0;transform:translateY(14px)}}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* =========== الهيرو =========== */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding-block:34px 6px}
+.hi{font-family:'Lalezar';font-size:1.05rem;color:var(--terra)}
+.hero h1{font-family:'Lalezar';font-weight:400;font-size:clamp(2.4rem,5.4vw,3.9rem);line-height:1.1;margin:4px 0 14px}
+.hl{background:var(--gold);padding:0 .18em;border-radius:.25em;display:inline-block;transform:rotate(-1.5deg)}
+.lead{color:var(--ink2);font-size:1rem;max-width:46ch}
+.hero-cta{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:20px;margin-top:24px;color:var(--ink2);font-size:.82rem;font-weight:600;flex-wrap:wrap}
+.hero-stats b{color:var(--ink);font-family:'Lalezar';font-size:1.25rem;margin-inline-end:5px;font-weight:400}
+
+/* مشهد القدرة */
+.scene{position:relative;width:min(430px,100%);margin-inline:auto;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.scene svg{width:100%;height:auto;display:block}
+.steam path{transform-box:fill-box;transform-origin:50% 100%;animation:steam 2.8s ease-in-out infinite;opacity:0}
+.steam path:nth-of-type(2){animation-delay:.9s}
+.steam path:nth-of-type(3){animation-delay:1.7s}
+@keyframes steam{0%{opacity:0;transform:translateY(10px) scale(.85)}30%{opacity:.85}70%{opacity:.45}100%{opacity:0;transform:translateY(-16px) scale(1.08)}}
+.flame path{transform-box:fill-box;transform-origin:50% 100%;animation:flick .55s ease-in-out infinite alternate}
+.flame path:nth-of-type(2){animation-delay:.18s;animation-duration:.72s}
+.flame path:nth-of-type(3){animation-delay:.32s}
+@keyframes flick{from{transform:scaleY(.88) scaleX(1.06)}to{transform:scaleY(1.16) scaleX(.9)}}
+.lid{transform-box:fill-box;transform-origin:center}
+.boil .lid{animation:lidpop .55s ease}
+@keyframes lidpop{0%,100%{transform:translateY(0)}40%{transform:translateY(-14px) rotate(-4deg)}}
+.boil .steam path{animation-duration:1.15s}
+.floaty{position:absolute;width:52px;height:52px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:grid;place-items:center;font-size:1.5rem;animation:bob 4.5s ease-in-out infinite}
+.floaty svg{width:34px;height:34px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.f1{inset-inline-end:2%;top:5%;background:var(--gold);color:var(--ink);animation-delay:.4s}
+.f2{inset-inline-start:0;bottom:9%;color:var(--terra)}
+.f3{inset-inline-start:9%;top:1%;color:var(--terra);width:44px;height:44px;animation-delay:1.2s}
+.f4{inset-inline-end:5%;bottom:14%;width:46px;height:46px;animation-delay:.8s;background:var(--olive-soft)}
+
+/* الشريط المتحرك */
+.ticker-wrap{overflow:hidden;margin-block:28px 0;padding-block:12px}
+.ticker{background:var(--ink);color:var(--cream);transform:rotate(-1.2deg) scale(1.03);padding:11px 0;overflow:hidden;border-block:2px solid var(--ink)}
+.ticker-track{display:flex;align-items:center;gap:32px;width:max-content;animation:tick 30s linear infinite;padding-inline:16px}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+.tk{font-family:'Lalezar';font-size:1.1rem;white-space:nowrap}
+.tk-ic{color:var(--gold);font-size:.85rem;flex-shrink:0}
+
+/* =========== الأقسام =========== */
+.sec{padding-block:44px 6px;scroll-margin-top:80px}
+.sec-t{font-family:'Lalezar';font-weight:400;font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.15}
+.sec-sub{color:var(--ink2);margin-top:4px;max-width:60ch}
+.squig{display:block;height:9px;margin-top:3px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='9'%3E%3Cpath d='M1 6 Q 7 1 14 6 T 27 6' fill='none' stroke='%23D14B24' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;background-size:28px 9px}
+.sec-head-row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);box-shadow:var(--sh)}
+.empty{text-align:center;padding:44px 18px;color:var(--ink2)}
+.empty i{font-size:3rem;color:var(--line2)}
+.empty h3{font-size:1.5rem;color:var(--ink);margin-top:8px}
+.empty .btn{margin-top:14px}
+
+/* طريقة الطلب — زي وصفة */
+.recipe{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:start}
+.recipe-card{padding:28px;position:relative}
+.recipe-card::before{content:'';position:absolute;top:-13px;inset-inline-start:34px;width:92px;height:24px;background:var(--gold);border:2px solid var(--ink);transform:rotate(-3deg);border-radius:4px}
+.step{display:flex;gap:16px;position:relative;padding-bottom:26px}
+.step:last-of-type{padding-bottom:0}
+.step:not(:last-of-type)::before{content:'';position:absolute;inset-inline-start:21px;top:48px;bottom:4px;border-inline-start:2px dashed var(--line2)}
+.step-n{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--cream);display:grid;place-items:center;font-family:'Lalezar';font-size:1.3rem;flex-shrink:0;position:relative;z-index:1}
+.step-b h4{font-family:'Lalezar';font-weight:400;font-size:1.25rem;display:flex;align-items:center;gap:8px}
+.step-b h4 i{color:var(--terra);font-size:1.35rem}
+.step-b p{font-size:.88rem;color:var(--ink2);margin-top:2px}
+
+/* منيو / أطباق */
+.menu-board{margin-top:18px;padding:26px 26px 12px}
+.mt-t{font-size:1.5rem;display:flex;align-items:center;gap:8px;color:var(--terra);margin-bottom:6px}
+.mgroup + .mgroup{margin-top:22px;border-top:2px dashed var(--line2);padding-top:18px}
+.mg-head{display:flex;align-items:center;gap:12px;margin-bottom:4px;flex-wrap:wrap}
+.mg-name{font-family:'Lalezar';font-weight:400;font-size:1.15rem;color:var(--terra)}
+.mg-loc{font-size:.75rem;color:var(--ink2);display:flex;gap:4px;align-items:center}
+.mg-go{margin-inline-start:auto}
+.k-av{width:var(--s,58px);height:var(--s,58px);border-radius:50%;border:2px solid var(--ink);overflow:hidden;background:var(--gold);display:grid;place-items:center;font-family:'Lalezar';font-size:1.3rem;flex-shrink:0;position:relative}
+.k-av img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.k-av b{font-weight:400}
+.dish{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.dish:last-of-type{border-bottom:0}
+.dish>img{width:56px;height:56px;object-fit:cover;border-radius:50%;border:2px solid var(--ink);flex-shrink:0}
+.d-info{min-width:0}
+.d-name{font-family:'Lalezar';font-weight:400;font-size:1.12rem;line-height:1.2}
+.d-desc{font-size:.76rem;color:var(--ink2);line-height:1.5;max-width:38ch;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.d-lead{flex:1;border-bottom:2px dotted var(--line2);margin:0 4px;transform:translateY(8px);min-width:16px}
+.d-price{font-weight:700;white-space:nowrap;font-size:.95rem}
+.d-price span{font-size:.72rem;color:var(--ink2);font-weight:600}
+.addbtn{width:38px;height:38px;border-radius:50%;background:var(--terra);color:#fff;border:2px solid var(--ink);display:grid;place-items:center;font-size:1.1rem;cursor:pointer;box-shadow:2px 2px 0 var(--ink);transition:.15s;flex-shrink:0}
+.addbtn:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}
+.addbtn:active{transform:translate(2px,2px);box-shadow:0 0 0 var(--ink)}
+.addbtn.pop{animation:pop .4s ease}
+@keyframes pop{40%{transform:scale(1.3) rotate(10deg)}}
+
+/* المطابخ */
+.rail{display:flex;gap:18px;overflow-x:auto;padding:10px 2px 20px;scroll-snap-type:x mandatory}
+.rail::-webkit-scrollbar{height:8px}
+.rail::-webkit-scrollbar-thumb{background:var(--line2);border-radius:99px}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;margin-top:18px}
+.kcard{min-width:280px;max-width:280px;scroll-snap-align:start;background:var(--card);border:2px solid var(--ink);border-radius:var(--r);box-shadow:var(--sh);padding:18px;cursor:pointer;transition:transform .2s}
+.kgrid .kcard{min-width:0;max-width:none}
+.kcard:nth-child(odd){transform:rotate(-1deg)}
+.kcard:nth-child(even){transform:rotate(.9deg)}
+.kcard:hover{transform:rotate(0) translateY(-4px)}
+.k-top{display:flex;gap:12px;align-items:center}
+.k-name{font-family:'Lalezar';font-weight:400;font-size:1.25rem;line-height:1.15}
+.k-bio{font-size:.8rem;color:var(--ink2);line-height:1.65;margin:10px 0;min-height:2.6em}
+.k-meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.k-btns{display:flex;gap:8px;flex-wrap:wrap}
+
+/* شريط انضم كشيف + فوتر */
+.join{background:var(--ink);color:var(--cream);border-radius:22px;box-shadow:var(--sh);padding:34px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;flex-wrap:wrap}
+.join h3{font-family:'Lalezar';font-weight:400;font-size:clamp(1.5rem,3vw,2.2rem);color:var(--gold)}
+.join p{color:#D9C6AD;max-width:52ch;font-size:.92rem}
+.big-ic{position:absolute;inset-inline-end:-14px;top:-20px;font-size:8.5rem;color:#3B2A1D;transform:rotate(12deg);pointer-events:none}
+.foot{margin-top:46px;border-top:2px solid var(--ink);padding:18px 4px 8px;display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--ink2);font-size:.8rem;align-items:center}
+.foot b{font-family:'Lalezar';font-weight:400;color:var(--terra);font-size:1.1rem}
+
+/* =========== السلة والدفع =========== */
+.cart-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start;margin-top:18px}
+.c-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.c-item>img{width:54px;height:54px;border-radius:12px;border:2px solid var(--ink);object-fit:cover}
+.c-kitchen{font-size:.72rem;color:var(--ink2)}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border-radius:9px;border:2px solid var(--ink);background:var(--paper);cursor:pointer;display:grid;place-items:center;font-size:.9rem}
+.qty b{min-width:18px;text-align:center}
+.sum{margin-top:14px;padding:16px 18px}
+.s-row{display:flex;justify-content:space-between;font-size:.9rem;padding:3px 0;color:var(--ink2)}
+.s-row b{color:var(--ink)}
+.s-row.tot{border-top:2px dashed var(--line2);margin-top:8px;padding-top:10px;font-size:1.05rem}
+.s-row.tot span,.s-row.tot b{color:var(--terra);font-family:'Lalezar';font-weight:400;font-size:1.25rem}
+.co-card{padding:22px;margin-bottom:16px}
+.co-t{font-family:'Lalezar';font-weight:400;font-size:1.3rem;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.co-t i{color:var(--terra)}
+.fld{display:flex;flex-direction:column;gap:5px;font-size:.78rem;font-weight:700;color:var(--ink2)}
+.inp{width:100%;padding:11px 14px;border:2px solid var(--ink);border-radius:12px;background:var(--paper);font:inherit;font-size:.92rem;color:var(--ink)}
+.inp:focus{outline:none;border-color:var(--terra);box-shadow:3px 3px 0 var(--gold-soft)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.co-nav{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.steps{display:flex;align-items:center;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+.stp{display:flex;align-items:center;gap:7px}
+.stp .dot{width:30px;height:30px;border-radius:50%;border:2px solid var(--ink);background:var(--paper);display:grid;place-items:center;font-size:.8rem;font-weight:700;transition:.2s}
+.stp.on .dot{background:var(--terra);color:#fff}
+.stp.done .dot{background:var(--olive);color:#fff}
+.stp small{font-size:.75rem;font-weight:700;color:var(--ink2)}
+.stp.on small{color:var(--ink)}
+.stp-line{flex:1;min-width:14px;border-top:2px dashed var(--line2)}
+.pay-card{padding:20px;display:flex;flex-direction:column;gap:12px}
+.vf{display:flex;align-items:center;gap:10px}
+.vf-mark{width:40px;height:40px;border-radius:12px;background:#E60000;color:#fff;display:grid;place-items:center;font-family:'Lalezar';font-size:1.15rem;border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.pay-amt{display:flex;align-items:baseline;justify-content:space-between;background:var(--gold-soft);border:2px solid var(--ink);border-radius:14px;padding:12px 16px;margin-bottom:14px}
+.pay-amt small{font-weight:700;color:var(--ink2)}
+.pay-amt b{font-family:'Lalezar';font-weight:400;font-size:1.7rem;color:var(--terra)}
+.pay-num{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--paper);border:2px dashed var(--line2);border-radius:12px;padding:10px 14px;font-weight:700;font-size:1.1rem}
+.qr-box{display:grid;place-items:center;gap:6px;padding:12px;border:2px dashed var(--line2);border-radius:14px;background:var(--paper)}
+.qr-box img{border:2px solid var(--ink);border-radius:10px}
+.qr-box small{font-size:.72rem;color:var(--ink2);font-weight:700}
+.pay-how{margin:14px 0 4px;padding-inline-start:20px;color:var(--ink2);font-size:.86rem;display:flex;flex-direction:column;gap:6px}
+.note{display:flex;gap:8px;align-items:flex-start;background:var(--gold-soft);border:2px solid var(--ink);border-radius:12px;padding:10px 14px;font-size:.82rem;font-weight:600;margin-top:12px}
+.note i{color:var(--terra-d);font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.dz{border:2px dashed var(--line2);border-radius:14px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;background:var(--paper);transition:.2s;text-align:center;position:relative}
+.dz:hover{border-color:var(--terra);background:#FFF6E4}
+.dz i{font-size:1.7rem;color:var(--terra)}
+.dz b{font-size:.9rem}
+.dz small{color:var(--ink2);font-size:.75rem}
+.dz img{max-height:150px;border-radius:10px;border:2px solid var(--ink)}
+.dz.has{padding:8px}
+.dz-x{position:absolute;top:8px;inset-inline-end:8px;width:28px;height:28px;border-radius:50%;border:2px solid var(--ink);background:var(--paper);cursor:pointer;display:grid;place-items:center}
+.co-login{padding:26px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.co-login i{font-size:2.2rem;color:var(--line2)}
+.rc-thumb{width:62px;height:62px;object-fit:cover;border-radius:10px;border:2px solid var(--ink)}
+
+/* =========== الأوردرات =========== */
+.o-card{padding:18px;margin-bottom:16px}
+.o-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.o-id{font-family:'Lalezar';font-weight:400;font-size:1.3rem;color:var(--terra)}
+.o-date{margin-inline-start:auto;font-size:.75rem;color:var(--ink2)}
+.chip{display:inline-flex;align-items:center;gap:5px;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;font-size:.74rem;font-weight:700;background:var(--paper)}
+.chip i{font-size:.9rem}
+.chip-gold{background:var(--gold-soft)} .chip-terra{background:var(--terra-soft)} .chip-olive{background:var(--olive-soft)}
+.o-items{display:flex;flex-direction:column;gap:4px;margin:8px 0}
+.o-line{display:flex;justify-content:space-between;font-size:.87rem;border-bottom:1px dotted var(--line);padding-bottom:4px}
+.o-total{font-size:.92rem;margin:8px 0}
+.o-addr,.o-cust{font-size:.82rem;color:var(--ink2);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.o-addr i,.o-cust i{color:var(--terra)}
+.o-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+
+/* =========== الشات =========== */
+.chat-wrap{display:grid;grid-template-columns:300px 1fr;gap:18px;margin-top:18px;align-items:start}
+.chat-list{padding:10px;display:flex;flex-direction:column;gap:6px;max-height:64vh;overflow-y:auto}
+.chat-item{display:flex;align-items:center;gap:10px;border:2px solid transparent;background:transparent;border-radius:14px;padding:8px;cursor:pointer;text-align:start;font:inherit;width:100%}
+.chat-item:hover{background:var(--cream)}
+.chat-item.on{border-color:var(--ink);background:var(--paper);box-shadow:2px 2px 0 var(--ink)}
+.chat-av{width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);background:var(--gold);display:grid;place-items:center;font-family:'Lalezar';font-size:1.1rem;flex-shrink:0;overflow:hidden}
+.chat-av img{width:100%;height:100%;object-fit:cover}
+.chat-mid{min-width:0;flex:1;display:flex;flex-direction:column}
+.chat-mid b{font-size:.88rem}
+.chat-mid small{color:var(--ink2);font-size:.74rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chat-time{font-size:.68rem;color:var(--ink2);align-self:flex-start;margin-top:4px}
+.chat-thread{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);box-shadow:var(--sh);display:flex;flex-direction:column;overflow:hidden}
+.th-head{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:2px solid var(--ink);background:var(--paper)}
+.th-name{flex:1;min-width:0}
+.th-name b{display:block;font-size:.95rem}
+.th-name small{color:var(--ink2);font-size:.75rem}
+.msgs{display:flex;flex-direction:column;gap:8px;padding:16px;overflow-y:auto;min-height:280px;max-height:52vh;background:var(--cream)}
+.bub{max-width:80%;padding:9px 13px;border-radius:14px;border:2px solid var(--ink);font-size:.88rem;line-height:1.55;width:fit-content}
+.bub.me{background:var(--terra);color:#fff;align-self:flex-end;border-end-end-radius:4px}
+.bub.them{background:var(--paper);align-self:flex-start;border-end-start-radius:4px}
+.bub-t{display:block;font-size:.62rem;opacity:.65;margin-top:2px}
+.th-inp{display:flex;gap:8px;padding:12px;border-top:2px solid var(--ink);background:var(--paper)}
+.th-empty{padding:60px 20px;text-align:center;color:var(--ink2)}
+.th-empty i{font-size:2.6rem;color:var(--line2)}
+.chat-back{display:none}
+
+/* =========== البروفايل =========== */
+.prof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;margin-top:18px;align-items:start}
+.p-card{padding:24px}
+.p-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.p-av{width:66px;height:66px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:'Lalezar';font-size:1.8rem;border:2px solid var(--ink);box-shadow:var(--sh-sm)}
+.p-name{font-family:'Lalezar';font-weight:400;font-size:1.5rem;line-height:1.1}
+.dash{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px;align-items:start}
+.dash-col{display:flex;flex-direction:column;gap:22px}
+.klogo-wrap{position:relative;width:86px;height:86px}
+.klogo-btn{position:absolute;bottom:-6px;inset-inline-end:-6px;width:30px;height:30px;border-radius:50%;border:2px solid var(--ink);background:var(--gold);display:grid;place-items:center;cursor:pointer;font-size:.95rem;box-shadow:2px 2px 0 var(--ink)}
+.mini-title{font-family:'Lalezar';font-weight:400;font-size:1.25rem;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.mini-title i{color:var(--terra)}
+.d-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.d-row img{width:48px;height:48px;border-radius:10px;border:2px solid var(--ink);object-fit:cover}
+.d-row .del{margin-inline-start:auto;width:32px;height:32px;border-radius:10px;border:2px solid var(--ink);background:var(--terra-soft);color:var(--terra-d);display:grid;place-items:center;cursor:pointer}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.stat-b{background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:10px 16px;box-shadow:2px 2px 0 var(--ink);text-align:center}
+.stat-b b{font-family:'Lalezar';font-weight:400;font-size:1.4rem;color:var(--terra);display:block;line-height:1.1}
+.stat-b small{font-size:.7rem;color:var(--ink2);font-weight:700}
+
+/* =========== المودال =========== */
+.overlay{position:fixed;inset:0;background:rgba(42,27,18,.5);backdrop-filter:blur(3px);display:grid;place-items:center;z-index:90;padding:16px;animation:fadeIn .25s}
+@keyframes fadeIn{from{opacity:0}}
+.modal{position:relative;background:var(--card);border:2px solid var(--ink);border-radius:22px;box-shadow:8px 8px 0 var(--ink);width:min(470px,100%);max-height:92vh;overflow-y:auto;padding:28px;animation:popIn .35s cubic-bezier(.2,1.3,.4,1)}
+@keyframes popIn{from{opacity:0;transform:scale(.9) translateY(16px)}}
+.modal-x{position:absolute;top:14px;inset-inline-end:14px;width:34px;height:34px;border-radius:50%;border:2px solid var(--ink);background:var(--paper);cursor:pointer;display:grid;place-items:center}
+.modal h3.lz{font-size:1.7rem;line-height:1.15}
+.modal .sub{color:var(--ink2);font-size:.88rem;margin:4px 0 18px}
+.wa-bub{background:#DFF5E1;border:2px solid var(--ink);border-radius:16px;border-end-start-radius:4px;padding:14px;margin-bottom:16px;position:relative;animation:viewIn .4s}
+.wa-head{display:flex;align-items:center;gap:8px;color:var(--wa);font-size:.85rem;margin-bottom:6px}
+.wa-code{font-family:'Lalezar';font-size:1.4rem;color:var(--ink);letter-spacing:4px}
+.demo-note{display:block;font-size:.72rem;color:var(--ink2);margin-top:8px}
+.code-row{display:flex;gap:10px;justify-content:center;margin:16px 0;direction:ltr}
+.code-inp{width:56px;height:60px;text-align:center;font-size:1.6rem;font-family:'Lalezar';border:2px solid var(--ink);border-radius:14px;background:var(--paper)}
+.code-inp:focus{outline:none;border-color:var(--terra);box-shadow:3px 3px 0 var(--gold-soft)}
+.code-inp.err{animation:shake .4s;border-color:var(--terra-d)}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.role-opt{display:flex;gap:14px;align-items:flex-start;border:2px solid var(--ink);border-radius:16px;padding:16px;cursor:pointer;background:var(--paper);transition:.15s;width:100%;text-align:start;font:inherit;margin-bottom:12px;box-shadow:var(--sh-sm)}
+.role-opt:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+.role-opt.sel{background:var(--gold-soft)}
+.role-r{width:24px;height:24px;border-radius:50%;border:2px solid var(--ink);flex-shrink:0;margin-top:3px;display:grid;place-items:center}
+.role-opt.sel .role-r::after{content:'';width:12px;height:12px;border-radius:50%;background:var(--terra)}
+.role-opt b{font-family:'Lalezar';font-weight:400;font-size:1.15rem;display:block}
+.role-opt small{color:var(--ink2);font-size:.8rem}
+.demo-box{border:2px dashed var(--line2);border-radius:12px;padding:10px 14px;font-size:.75rem;color:var(--ink2);margin-top:16px;background:var(--paper)}
+.succ{text-align:center}
+.succ-ic{width:64px;height:64px;border-radius:50%;background:var(--olive-soft);border:2px solid var(--ink);color:var(--olive);font-size:2rem;display:grid;place-items:center;margin:0 auto 10px;animation:popIn .5s cubic-bezier(.2,1.5,.4,1)}
+.stamp{display:inline-block;font-family:'Lalezar';font-size:2.1rem;color:var(--terra);border:3px dashed var(--terra);padding:4px 22px;border-radius:14px;transform:rotate(-2deg);margin:10px 0 16px;animation:stampIn .55s cubic-bezier(.2,1.4,.3,1)}
+@keyframes stampIn{from{opacity:0;transform:scale(1.8) rotate(-14deg)}}
+.succ-rows{display:flex;flex-direction:column;gap:6px;text-align:start;background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:14px;margin-bottom:14px;font-size:.88rem}
+.succ-rows small{color:var(--ink2);font-weight:700}
+.succ-rec{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.succ-rec img{max-height:110px;border-radius:10px;border:2px solid var(--ink)}
+.succ-rec .dz{min-width:180px;padding:14px}
+.succ-btns{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+
+/* =========== التوست =========== */
+#toasts{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:120;display:flex;flex-direction:column;gap:8px;align-items:center;width:max-content;max-width:92vw}
+.toast{display:flex;align-items:center;gap:8px;background:var(--ink);color:var(--cream);padding:10px 18px;border-radius:999px;box-shadow:var(--sh-sm);font-weight:600;font-size:.88rem;animation:tIn .3s ease}
+.toast i{color:var(--gold);font-size:1.15rem;flex-shrink:0}
+@keyframes tIn{from{opacity:0;transform:translateY(-14px)}}
+.toast.out{opacity:0;transform:translateY(-10px);transition:.3s}
+
+/* =========== ريسبونسف =========== */
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr;gap:20px}
+  .scene{width:min(320px,86%)}
+  .recipe{grid-template-columns:1fr}
+  .cart-grid,.prof-grid,.dash,.chat-wrap{grid-template-columns:1fr}
+  .f3{grid-template-columns:1fr 1fr}
+}
+@media(max-width:759px){
+  .chat-wrap.threading .chat-list{display:none}
+  .chat-wrap:not(.threading) .chat-thread{display:none}
+  .chat-back{display:grid}
+}
+@media(max-width:560px){
+  .d-desc{display:none}
+  .hide-sm{display:none}
+  .f2,.f3{grid-template-columns:1fr}
+  .me-name{display:none}
+  main{padding:0 14px}
+}
+</style>
+</head>
+<body>
+
+<div id="toasts"></div>
+
+<header>
+  <div class="brand" onclick="go('home')">
+    <!-- لوجو أكل ماما — حلة بخار متحرك -->
+    <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="36" r="26" fill="#F4E4C6"/>
+      <g class="stm" stroke="#D08A57" stroke-width="3.5" stroke-linecap="round" fill="none">
+        <path d="M25 21 c-2.5 -4 2.5 -5 0 -9"/>
+        <path d="M39 21 c-2.5 -4 2.5 -5 0 -9"/>
+      </g>
+      <rect x="28" y="19" width="8" height="8" rx="3" fill="#D14B24" stroke="#2A1B12" stroke-width="2"/>
+      <ellipse cx="32" cy="27" rx="17" ry="4.5" fill="#EFB03F" stroke="#2A1B12" stroke-width="2.5"/>
+      <path d="M15 31h34v11a13 13 0 0 1-13 13h-8a13 13 0 0 1-13-13z" fill="#D14B24" stroke="#2A1B12" stroke-width="2.5"/>
+      <rect x="17" y="33" width="30" height="4" fill="#FAF1E1" opacity=".9"/>
+    </svg>
+    <span class="brand-tx"><b data-i18n="brand"></b><small data-i18n="brand_sub"></small></span>
+  </div>
+  <div class="hd-actions">
+    <button class="lang-btn" id="lang-btn" onclick="toggleLang()">EN</button>
+    <button class="icon-btn" onclick="go('cart')" aria-label="cart"><i class="ph ph-basket"></i><span class="badge hide" id="cart-badge">0</span></button>
+    <div id="auth-slot"></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ الرئيسية ============ -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div>
+        <div class="hi" data-i18n="hero_hi"></div>
+        <h1><span data-i18n="hero_t1"></span> <span class="hl" data-i18n="hero_t2"></span></h1>
+        <p class="lead" data-i18n="hero_sub"></p>
+        <div class="hero-cta">
+          <button class="btn" onclick="ctaOrder()"><i class="ph-fill ph-fork-knife"></i><span data-i18n="cta_order"></span></button>
+          <button class="btn btn-ghost" onclick="ctaChef()"><i class="ph-bold ph-cooking-pot"></i><span data-i18n="cta_chef"></span></button>
+        </div>
+        <div class="hero-stats" id="hero-stats"></div>
+      </div>
+
+      <!-- القدرة بتاعة ماما — دوس عليها -->
+      <div class="scene rv" id="pot-scene" onclick="boil()" role="button" aria-label="pot">
+        <svg viewBox="0 0 320 292">
+          <circle cx="160" cy="160" r="118" fill="#F3E2C0"/>
+          <circle cx="160" cy="160" r="133" fill="none" stroke="#E4CFA4" stroke-width="3" stroke-dasharray="4 12"/>
+          <g class="steam" stroke="#D08A57" stroke-width="7" stroke-linecap="round" fill="none">
+            <path d="M118 100 C110 86 126 78 118 62"/>
+            <path d="M160 92 C152 76 170 68 160 50"/>
+            <path d="M202 100 C194 86 210 78 202 62"/>
+          </g>
+          <g class="lid">
+            <rect x="146" y="104" width="28" height="18" rx="9" fill="#D14B24" stroke="#2A1B12" stroke-width="4"/>
+            <ellipse cx="160" cy="126" rx="76" ry="13" fill="#EFB03F" stroke="#2A1B12" stroke-width="4"/>
+          </g>
+          <path d="M84 138 H236 V176 A40 40 0 0 1 196 216 H124 A40 40 0 0 1 84 176 Z" fill="#D14B24" stroke="#2A1B12" stroke-width="4"/>
+          <rect x="88" y="144" width="144" height="10" fill="#FAF1E1" opacity=".92"/>
+          <path d="M84 150 H64 A13 13 0 0 0 64 176 H84" fill="none" stroke="#2A1B12" stroke-width="4"/>
+          <path d="M236 150 H256 A13 13 0 0 1 256 176 H236" fill="none" stroke="#2A1B12" stroke-width="4"/>
+          <g class="flame">
+            <path d="M132 244 C128 230 140 226 136 216 C146 224 148 236 142 244 Z" fill="#EFB03F"/>
+            <path d="M158 244 C150 224 168 222 162 206 C176 218 176 236 168 244 Z" fill="#D14B24"/>
+            <path d="M186 244 C182 232 192 228 190 220 C198 228 198 238 192 244 Z" fill="#EFB03F"/>
+          </g>
+          <rect x="100" y="246" width="120" height="11" rx="5.5" fill="#2A1B12"/>
+          <rect x="118" y="261" width="84" height="8" rx="4" fill="#2A1B12" opacity=".16"/>
+        </svg>
+        <div class="floaty f1"><i class="ph-fill ph-fire"></i></div>
+        <div class="floaty f2"><i class="ph-fill ph-fork-knife"></i></div>
+        <div class="floaty f3"><i class="ph-fill ph-heart"></i></div>
+        <div class="floaty f4"><svg viewBox="0 0 40 40"><circle cx="20" cy="24" r="12" fill="#D14B24" stroke="#2A1B12" stroke-width="2.5"/><path d="M20 11 c-4 -4 -9 -2 -9 2 c3 2 6 1 9 -2 c3 3 6 4 9 2 c0 -4 -5 -6 -9 -2z" fill="#63773B" stroke="#2A1B12" stroke-width="2"/></svg></div>
+      </div>
+    </div>
+
+    <div class="ticker-wrap"><div class="ticker"><div class="ticker-track" id="ticker-track"></div></div></div>
+
+    <section class="sec">
+      <div class="recipe">
+        <div>
+          <h2 class="sec-t"><span data-i18n="hiw_title"></span><span class="squig"></span></h2>
+          <p class="sec-sub" data-i18n="hiw_sub"></p>
+        </div>
+        <div class="card recipe-card rv">
+          <div class="step"><span class="step-n">1</span><div class="step-b"><h4><i class="ph ph-fork-knife"></i><span data-i18n="hiw1_t"></span></h4><p data-i18n="hiw1_d"></p></div></div>
+          <div class="step"><span class="step-n">2</span><div class="step-b"><h4><i class="ph ph-device-mobile"></i><span data-i18n="hiw2_t"></span></h4><p data-i18n="hiw2_d"></p></div></div>
+          <div class="step"><span class="step-n">3</span><div class="step-b"><h4><i class="ph ph-moped"></i><span data-i18n="hiw3_t"></span></h4><p data-i18n="hiw3_d"></p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="menu-sec">
+      <h2 class="sec-t"><span data-i18n="menu_title"></span><span class="squig"></span></h2>
+      <p class="sec-sub" data-i18n="menu_sub"></p>
+      <div class="card menu-board" id="home-menu"></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-head-row">
+        <h2 class="sec-t"><span data-i18n="chefs_title"></span><span class="squig"></span></h2>
+        <button class="btn btn-sm btn-ghost" onclick="go('chefs')"><span data-i18n="view_all"></span><i class="ph-bold ph-arrow-left"></i></button>
+      </div>
+      <p class="sec-sub" data-i18n="chefs_sub"></p>
+      <div class="rail" id="home-chefs"></div>
+    </section>
+
+    <section class="sec">
+      <div class="join rv">
+        <i class="ph-fill ph-cooking-pot big-ic"></i>
+        <div><h3 data-i18n="join_t"></h3><p data-i18n="join_d"></p></div>
+        <button class="btn btn-gold" onclick="ctaChef()"><span data-i18n="join_btn"></span></button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <b data-i18n="brand"></b>
+      <span data-i18n="footer_note"></span>
+      <span data-i18n="footer_pay"></span>
+    </footer>
+  </section>
+
+  <section class="view" id="view-chefs"></section>
+  <section class="view" id="view-chef"></section>
+  <section class="view" id="view-cart"></section>
+  <section class="view" id="view-orders"></section>
+  <section class="view" id="view-chat"></section>
+  <section class="view" id="view-profile"></section>
+
+</main>
+
+<!-- الناف السفلي -->
+<nav class="bnav" aria-label="main nav">
+  <button class="bn active" data-v="home" onclick="go('home')"><i class="ph ph-house"></i><span data-i18n="nav_home"></span></button>
+  <button class="bn" data-v="chefs" onclick="go('chefs')"><i class="ph ph-cooking-pot"></i><span data-i18n="nav_chefs"></span></button>
+  <button class="bn" data-v="cart" onclick="go('cart')"><i class="ph ph-basket"></i><span data-i18n="nav_cart"></span><span class="badge hide" id="bn-badge">0</span></button>
+  <button class="bn" data-v="chat" onclick="go('chat')"><i class="ph ph-chat-circle-dots"></i><span data-i18n="nav_chat"></span></button>
+  <button class="bn" data-v="profile" onclick="go('profile')"><i class="ph ph-user"></i><span data-i18n="nav_profile"></span></button>
+</nav>
+
+<div id="modal-root"></div>
+<input type="file" id="file-pick" accept="image/*" hidden>
+
+<script>
+/* =====================================================
+   أكل ماما — كل حاجة شغالة محليًا على جهازك
+   غيّر الثوابت دي لو حبيت:
+===================================================== */
+const WA_PLATFORM = '201014501726';                                    // رقم واتساب المنصة
+const PAY_LINK    = 'http://vf.eg/vfcash?id=mt&qrId=OrTc7H';           // لينك فودافون كاش
+const PAY_NUMBER  = '01014501726';
+const DELIVERY    = 15;                                                // مصاريف توصيل ثابتة
+const SUPPORT     = 'SUPPORT';
+const FALLBACK    = 'https://picsum.photos/seed/am-dish/300/300.jpg';
+const LS_KEY      = 'aklet_mama_db_v1';
+
+/* =========== الترجمة =========== */
+let lang = localStorage.getItem('am_lang') || 'ar';
+const T = {
+ar:{
+  brand:'أكل ماما', brand_sub:"MAMA'S KITCHEN",
+  nav_home:'الرئيسية', nav_chefs:'المطابخ', nav_cart:'السلة', nav_chat:'الشات', nav_profile:'حسابي',
+  login:'دخول', logout:'تسجيل خروج',
+  hero_hi:'أهلاً بيك في', hero_t1:'أكل بيتي طازة', hero_t2:'من مطبخ ماما',
+  hero_sub:'منصة بتوصلك بأحسن المطابخ البيتية اللي جنبك — تطلب، تدفع فودافون كاش، وتبعت الإيصال، والأكل يوصل لحد باب شقتك.',
+  cta_order:'اطلب دلوقتي', cta_chef:'افتح مطبخك',
+  stat_kitchens:'مطابخ على المنصة', stat_dishes:'طبق في المنيو', stat_deliv:'جنيه توصيل ثابت',
+  hiw_title:'إزاي بتطلب؟', hiw_sub:'ثلاث خطوات والأكل عندك — زي وصفة ماما بالظبط.',
+  hiw1_t:'اختر أكلك', hiw1_d:'اتفرج على منيو المطابخ اللي جنبك واختار اللي نفسك فيه.',
+  hiw2_t:'ادفع فودافون كاش', hiw2_d:'ادفع على رقم المنصة أو من اللينك المباشر، وبعدها صوّر شاشة الإيصال.',
+  hiw3_t:'ابعت الإيصال واستلم', hiw3_d:'ارفع الإيصال من جوه المنصة أو ابعتها واتساب — والأكل يوصل لحد باب شقتك.',
+  menu_title:'منيو النهاردة', menu_sub:'أطباق بتتعده دلوقتي في مطابخ ماما — الأكلة اللي نفسك فيها غالبًا موجودة.',
+  from_kitchen:'من مطبخ', view_menu:'شوف المنيو', view_all:'شوف الكل',
+  empty_menu:'لسه مفيش أطباق — افتح مطبخك وكن أول من يعدّي أكلة!',
+  chefs_title:'مطابخ ماما', chefs_sub:'شيفات بيطبخوا في مطابخ بيوتهم بيوم بعدين يوصلوا لحد عندك.',
+  dishes_n:'أطباق', chat_short:'شات', chat_with_chef:'اتكلم مع الشيف',
+  no_chefs:'مفيش مطابخ مسجلة لسه.', no_dishes:'مفيش أطباق لسه — ضيف أول طبق.',
+  join_t:'عندك موهبة في المطبخ؟', join_d:'افتح مطبخك على أكل ماما، ارفع أطباقك بلوجو مطبخك، واستقبل أوردرات من جيرانك.',
+  join_btn:'سجّل مطبخك',
+  footer_note:'صُنع بحب في مصر — أكل بيتي زي ماما بالظبط.',
+  footer_pay:'الدفع بفودافون كاش — الإيصالات بتوصل واتساب على 01014501726.',
+  cart_title:'سلتك', cart_empty_t:'سلتك فاضية', cart_empty_d:'الحلاني على نار — اتفرج على المنيو واختار أكلك.',
+  browse_menu:'اتفرج على المنيو', subtotal:'المجموع', delivery:'التوصيل', total:'الإجمالي',
+  checkout:'اتمم الأوردر', login_first:'سجّل دخول الأول',
+  login_required:'سجّل دخول الأول علشان تتمم الأوردر.',
+  step_addr:'العنوان', step_pay:'الدفع', step_confirm:'التأكيد',
+  street:'الشارع والمنطقة', building:'رقم العمارة', floor:'الدور كام', apt:'رقم الشقة',
+  notes:'ملاحظات للأوردر (اختياري)', next:'التالي', back:'رجوع',
+  fill_address:'املا بيانات العنوان كلها علشان الأكل يوصلك صح.',
+  pay_title:'الدفع بفودافون كاش', pay_amount:'المطلوب دفعه',
+  pay_number:'رقم فودافون كاش', pay_link:'لينك الدفع المباشر', open_pay:'افتح صفحة الدفع',
+  scan_qr:'امسح الكود بتاع الدفع', copy:'نسخ', copied:'اتنسخ!',
+  pay_how1:'ادفع المبلغ اللي فوق على الرقم أو من اللينك المباشر.',
+  pay_how2:'صوّر شاشة إيصال الدفع بعد ما تخلّص.',
+  pay_how3:'ارفع الصورة في الخطوة الجاية أو ابعتها واتساب على 01014501726.',
+  pay_note:'بعد الدفع لازم نستلم صورة الإيصال علشان المطبخ يشعل ناره — من غير الإيصال مفيش أكل.',
+  confirm_order:'تأكيد الأوردر', receipt_title:'صورة إيصال الدفع',
+  receipt_optional_d:'ارفع صورة الإيصال من هنا، أو هبعتها واتساب بعد التأكيد — لكن من غيرها الأكل مش هيتحرك.',
+  choose_img:'اختار صورة', order_placed:'الأوردر اتسجل!', order_no:'رقم الأوردر',
+  send_receipt_wa:'ابعت الإيصال واتساب', support_chat:'شات أكل ماما', keep_browsing:'كمّل تسوّق',
+  receipt_ok:'استلمنا الإيصال — قيد التأكيد', receipt_missing:'لسه مستنيين الإيصال',
+  receipt_must:'مهم: لازم نستلم صورة إيصال الدفع علشان الأكل يتحرك — ابعته من هنا أو واتساب على 01014501726.',
+  upload_here:'ارفع الإيصال هنا',
+  auth_title:'سجّل دخول بواتساب', auth_sub:'هنبعتلك كود على واتساب — ومفيش كلمة سر تفتكرها.',
+  phone_label:'رقم الموبايل', send_code:'ابعت الكود واتساب',
+  code_title:'اكتب كود التحقق', code_sent_to:'بعتنا الكود على',
+  demo_note:'نسخة تجريبية: الكود بيظهر في الرسالة دي بدل الواتساب الحقيقي.',
+  tap_fill:'اضغط تعبئة تلقائية', verify:'تأكيد الدخول',
+  wrong_code:'الكود غلط — حاول تاني.', resend:'تبعت الكود تاني',
+  invalid_phone:'اكتب رقم موبايل مصري صحيح يبدأ بـ 01.',
+  choose_role:'هتدخل كإيه؟',
+  role_c:'عميل — جعان', role_c_d:'تطلب أكل بيتي يوصل لحد باب شقتك.',
+  role_ch:'شيف — عندي مطبخ', role_ch_d:'ارفع أطباقك بلوجو مطبخك واستقبل أوردرات.',
+  your_name:'اسمك', kitchen_name:'اسم المطبخ', kitchen_name_en:'اسم المطبخ بالإنجليزي (اختياري)',
+  kitchen_addr:'عنوان المطبخ', kitchen_logo:'لوجو المطبخ', upload_logo:'ارفع لوجو',
+  continue:'يلا بينا', fill_required:'املا البيانات المطلوبة.',
+  welcome:'أهلاً بيك يا', bye:'سلام — نرجعك تاني قريب.',
+  demo_hint:'تجربة سريعة: أي رقم يبدأ بـ 01 للعميل · الرقم 01000000001 لدخول شيف تجريبي.',
+  added_to_cart:'اتضاف للسلة', saved:'اتحفظ', profile_saved:'بياناتك اتحدثت.',
+  dish_added:'الطبق اتضاف للمنيو.', dish_deleted:'الطبق اتشال من المنيو.',
+  receipt_uploaded:'استلمنا الإيصال — فريق التأكيد هيرد عليك في الشات.',
+  order_confirmed:'الأوردر اتأكد — على النار!',
+  chef_dash:'لوحة الشيف', my_kitchen:'مطبخي', kitchen_phone:'رقم التواصل',
+  kitchen_bio:'نبذة عن مطبخك', save_kitchen:'حفظ بيانات المطبخ',
+  add_dish:'أضف طبق جديد', dish_name:'اسم الطبق (عربي)', dish_name_en:'اسم الطبق بالإنجليزي (اختياري)',
+  dish_price:'السعر (ج.م)', dish_desc:'وصف صادق يفتح النفس', dish_img:'صورة الطبق',
+  save_dish:'ضيف الطبق', my_dishes:'أطباقي', incoming:'الأوردرات الواردة', no_orders:'مفيش أوردرات لسه.',
+  customer:'العميل', confirm_o:'تأكيد الأوردر', my_orders:'طلباتي',
+  status_awaiting:'بانتظار الإيصال', status_review:'قيد التأكيد', status_confirmed:'مؤكد — على النار',
+  receipt:'الإيصال', send_wa:'واتساب', call:'اتصال',
+  chat_title:'الشات', no_chats:'مفيش محادثات لسه — افتح صفحة مطبخ وابدأ أول كلام.',
+  type_msg:'اكتب رسالتك…', support:'دعم أكل ماما', open_wa:'افتح واتساب', pick_chat:'اختار محادثة من القايمة.',
+  supp_hello:'أهلاً بيك في أكل ماما! معاك فريق الدعم — لو محتاج مساعدة في أوردر أو دفع اكتب لنا.',
+  supp_receipt_ok:'استلمنا إيصال الأوردر {id} — هنعتمده في دقايق والمطبخ يشعل على طول.',
+  supp_wait_receipt:'استلمنا الأوردر {id} — مستنيين إيصال الدفع علشان نبدأ التأكيد.',
+  supp_generic:'وصلت رسالتك! لو بتستنى تأكيد أوردر، ابعت إيصال الدفع وهنرود عليك حالاً.',
+  my_address:'عنوان التوصيل', save_addr:'حفظ العنوان',
+  egp_cur:'ج.م',
+  wa_hi:'أهلاً، شفت مطبخك على أكل ماما وحابب أستفسر عن الأكل.',
+  wa_thread:'أهلاً، بوصل لك من شات منصة أكل ماما.'
+},
+en:{
+  brand:"Mama's Kitchen", brand_sub:'أكل ماما • مطبخ بيتي',
+  nav_home:'Home', nav_chefs:'Kitchens', nav_cart:'Cart', nav_chat:'Chat', nav_profile:'Account',
+  login:'Sign in', logout:'Log out',
+  hero_hi:'Welcome to', hero_t1:'Home-cooked food', hero_t2:"from mama's kitchen",
+  hero_sub:'A platform connecting you with the best home kitchens around — order, pay with Vodafone Cash, send the receipt, and food arrives at your apartment door.',
+  cta_order:'Order now', cta_chef:'Open your kitchen',
+  stat_kitchens:'kitchens live', stat_dishes:'dishes on menu', stat_deliv:'EGP flat delivery',
+  hiw_title:'How it works', hiw_sub:"Three steps and lunch is served — just like mama's recipe.",
+  hiw1_t:'Pick your food', hiw1_d:'Browse nearby home kitchens and pick whatever you crave.',
+  hiw2_t:'Pay with Vodafone Cash', hiw2_d:'Pay to the platform number or via the direct link, then screenshot the receipt.',
+  hiw3_t:'Send receipt & receive', hiw3_d:'Upload the receipt in-app or send it on WhatsApp — food arrives at your apartment door.',
+  menu_title:"Today's menu", menu_sub:"Dishes being cooked right now in mama's kitchens.",
+  from_kitchen:'from', view_menu:'View menu', view_all:'View all',
+  empty_menu:'No dishes yet — open your kitchen and be the first!',
+  chefs_title:"Mama's kitchens", chefs_sub:'Home chefs cooking from their own kitchens, delivered to your door.',
+  dishes_n:'dishes', chat_short:'Chat', chat_with_chef:'Chat with the chef',
+  no_chefs:'No kitchens registered yet.', no_dishes:'No dishes yet — add your first one.',
+  join_t:'Got a knack for cooking?', join_d:'Open your kitchen on Aklet Mama, upload your dishes with your kitchen logo, and take orders from your neighbours.',
+  join_btn:'Register your kitchen',
+  footer_note:'Made with love in Egypt — home food just like mama\u2019s.',
+  footer_pay:'Pay via Vodafone Cash — receipts received on WhatsApp 01014501726.',
+  cart_title:'Your cart', cart_empty_t:'Your cart is empty', cart_empty_d:'The pots are on — go pick something tasty.',
+  browse_menu:'Browse the menu', subtotal:'Subtotal', delivery:'Delivery', total:'Total',
+  checkout:'Checkout', login_first:'Sign in first',
+  login_required:'Sign in first to place your order.',
+  step_addr:'Address', step_pay:'Payment', step_confirm:'Confirm',
+  street:'Street & area', building:'Building no.', floor:'Floor', apt:'Apartment no.',
+  notes:'Order notes (optional)', next:'Next', back:'Back',
+  fill_address:'Fill the full address so your food finds you.',
+  pay_title:'Pay with Vodafone Cash', pay_amount:'Amount to pay',
+  pay_number:'Vodafone Cash number', pay_link:'Direct payment link', open_pay:'Open payment page',
+  scan_qr:'Scan the payment QR', copy:'Copy', copied:'Copied!',
+  pay_how1:'Send the amount above to the number or the direct link.',
+  pay_how2:'Take a screenshot of the payment receipt.',
+  pay_how3:'Upload it in the next step or WhatsApp it to 01014501726.',
+  pay_note:'After paying, we must receive your receipt screenshot before the kitchen fires up — no receipt, no food.',
+  confirm_order:'Place order', receipt_title:'Payment receipt screenshot',
+  receipt_optional_d:'Upload the receipt here, or send it on WhatsApp after confirming — without it, cooking will not start.',
+  choose_img:'Choose image', order_placed:'Order placed!', order_no:'Order no.',
+  send_receipt_wa:'Send receipt on WhatsApp', support_chat:'Aklet Mama support', keep_browsing:'Keep browsing',
+  receipt_ok:'Receipt received — under review', receipt_missing:'Still waiting for the receipt',
+  receipt_must:'Heads up: we must receive your payment screenshot before cooking starts — send it here or on WhatsApp 01014501726.',
+  upload_here:'Upload receipt here',
+  auth_title:'Sign in with WhatsApp', auth_sub:'We\u2019ll WhatsApp you a code — no passwords to remember.',
+  phone_label:'Mobile number', send_code:'Send code on WhatsApp',
+  code_title:'Enter the code', code_sent_to:'Code sent to',
+  demo_note:'Demo build: the code shows in this bubble instead of a real WhatsApp message.',
+  tap_fill:'Tap to autofill', verify:'Verify & sign in',
+  wrong_code:'Wrong code — try again.', resend:'Resend code',
+  invalid_phone:'Enter a valid Egyptian number starting with 01.',
+  choose_role:'How are you joining?',
+  role_c:'Customer — hungry', role_c_d:'Order home food to your apartment door.',
+  role_ch:'Chef — I have a kitchen', role_ch_d:'Upload your dishes with your kitchen logo and receive orders.',
+  your_name:'Your name', kitchen_name:'Kitchen name', kitchen_name_en:'Kitchen name in English (optional)',
+  kitchen_addr:'Kitchen address', kitchen_logo:'Kitchen logo', upload_logo:'Upload logo',
+  continue:'Let\u2019s go', fill_required:'Please fill the required fields.',
+  welcome:'Welcome,', bye:'Bye — see you soon!',
+  demo_hint:'Quick demo: any 01\u2026 number as customer \u00b7 use 01000000001 to enter the demo chef account.',
+  added_to_cart:'Added to cart', saved:'Saved', profile_saved:'Your details are updated.',
+  dish_added:'Dish added to your menu.', dish_deleted:'Dish removed from the menu.',
+  receipt_uploaded:'Receipt received — our team will confirm in chat.',
+  order_confirmed:'Order confirmed — fire up!',
+  chef_dash:'Chef dashboard', my_kitchen:'My kitchen', kitchen_phone:'Contact number',
+  kitchen_bio:'About your kitchen', save_kitchen:'Save kitchen',
+  add_dish:'Add a new dish', dish_name:'Dish name (Arabic)', dish_name_en:'Dish name in English (optional)',
+  dish_price:'Price (EGP)', dish_desc:'An honest, appetite-raising description', dish_img:'Dish photo',
+  save_dish:'Add dish', my_dishes:'My dishes', incoming:'Incoming orders', no_orders:'No orders yet.',
+  customer:'Customer', confirm_o:'Confirm order', my_orders:'My orders',
+  status_awaiting:'Awaiting receipt', status_review:'Confirming receipt', status_confirmed:'Confirmed — cooking',
+  receipt:'Receipt', send_wa:'WhatsApp', call:'Call',
+  chat_title:'Chat', no_chats:'No conversations yet — open a kitchen page and say hi.',
+  type_msg:'Type a message\u2026', support:'Aklet Mama Support', open_wa:'Open WhatsApp', pick_chat:'Pick a conversation from the list.',
+  supp_hello:'Welcome to Aklet Mama! Support here — need help with an order or payment? Just write.',
+  supp_receipt_ok:'Received the receipt for order {id} — we\u2019ll confirm shortly and the kitchen fires up.',
+  supp_wait_receipt:'Got order {id} — waiting for your payment receipt to start confirmation.',
+  supp_generic:'Got your message! If you\u2019re waiting on an order, send the payment receipt and we\u2019ll reply right away.',
+  my_address:'Delivery address', save_addr:'Save address',
+  egp_cur:'EGP',
+  wa_hi:'Hi! I found your kitchen on Aklet Mama and I\u2019d like to ask about your food.',
+  wa_thread:'Hello, messaging from the Aklet Mama platform chat.'
+}
+};
+const t = k => (T[lang] && T[lang][k]) ?? T.ar[k] ?? k;
+
+/* =========== أدوات =========== */
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const backIc   = () => lang === 'ar' ? 'ph-caret-right' : 'ph-caret-left';
+const nextIc   = () => lang === 'ar' ? 'ph-arrow-left'  : 'ph-arrow-right';
+const fmtTime  = ts => new Date(ts).toLocaleTimeString(lang==='ar'?'ar-EG':'en-GB',{hour:'2-digit',minute:'2-digit'});
+const fmtDate  = ts => new Date(ts).toLocaleString(lang==='ar'?'ar-EG':'en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+const chefName = c => (lang==='en' && c.kitchenNameEn) ? c.kitchenNameEn : c.kitchenName;
+const dishName = d => (lang==='en' && d.nameEn) ? d.nameEn : d.name;
+const dishDesc = d => (lang==='en' && d.descEn) ? d.descEn : (d.desc || '');
+
+function toast(msg, icon='ph-check-circle'){
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.innerHTML = `<i class="ph-fill ${icon}"></i><span>${esc(msg)}</span>`;
+  $('#toasts').appendChild(el);
+  setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>el.remove(), 320); }, 2400);
+}
+
+/* =========== قاعدة البيانات المحلية =========== */
+let db = loadDB();
+function loadDB(){
+  try{
+    const d = JSON.parse(localStorage.getItem(LS_KEY));
+    if(d && d.users && d.chefs) return d;
+  }catch(e){}
+  return seedDB();
+}
+function persist(){ localStorage.setItem(LS_KEY, JSON.stringify(db)); }
+
+function seedDB(){
+  const P = s => `https://picsum.photos/seed/${s}/500/400.jpg`;
+  const L = s => `https://picsum.photos/seed/${s}/200/200.jpg`;
+  const chefs = {
+    '01000000001':{phone:'01000000001',kitchenName:'مطبخ أم يوسف',kitchenNameEn:"Umm Yousef's Kitchen",
+      bio:'أكل بلدي على أصوله — ملوخية ومحشي وبطّ زي زمان.',bioEn:'Classic Egyptian home food — molokhia, mahshi and duck just like the old days.',
+      address:'12 شارع الترعة، فيصل، الجيزة',logo:L('um-yousef-kitchen'),dishes:[
+        {id:'d11',name:'كشري مصري',nameEn:'Egyptian Koshary',desc:'أرز وعدس ومكرونة بصوص الطماطة الحرّاق والبصل المقرمش',descEn:'Rice, lentils & pasta in spicy tomato sauce with crispy onions',price:45,img:P('koshary-plate')},
+        {id:'d12',name:'ملوخية بالفراخ',nameEn:'Molokhia & Chicken',desc:'ملوخية بيتي بالتقلصة مع فراخ فرن بلمون',descEn:'Home-style molokhia with oven-roasted lemon chicken',price:75,img:P('molokhia-bowl')},
+        {id:'d13',name:'محشي بيتي',nameEn:'Home Mahshi',desc:'كرنب وباذنجان محشيين أرز بالصلصة الحمر',descEn:'Cabbage & eggplant stuffed with herbed rice in red sauce',price:60,img:P('mahshi-tray')},
+        {id:'d14',name:'بطّ محمر',nameEn:'Crispy Duck',desc:'بط متبل بالبصل والبهارات على أصوله',descEn:'Slow-cooked duck with onions and warm spices',price:150,img:P('duck-roast')}
+      ]},
+    '01000000002':{phone:'01000000002',kitchenName:'مطبخ الحاج سيد',kitchenNameEn:"Hagg Sayed's Kitchen",
+      bio:'حواوشي ومشويات على الفحم من قلب بحري.',bioEn:'Hawawshi and charcoal grills from the heart of Bahary, Alexandria.',
+      address:'22 شارع الجيش، بحري، الإسكندرية',logo:L('hagg-sayed-kitchen'),dishes:[
+        {id:'d21',name:'حواوشي إسكندراني',nameEn:'Iskandarani Hawawshi',desc:'لحمة مفرومة بالبصل والفلفل جوه عيش بلدي في الفرن',descEn:'Spiced minced beef baked inside baladi bread',price:65,img:P('hawawshi-bread')},
+        {id:'d22',name:'فراخ مشوية على الفحم',nameEn:'Charcoal Grilled Chicken',desc:'نص فراخ متبلة بتتشوى قدامك على الفحم',descEn:'Half chicken marinated and grilled over charcoal',price:90,img:P('grill-chicken')},
+        {id:'d23',name:'كفتة لحمة مشوية',nameEn:'Grilled Kofta',desc:'كفتة فرم بلدي بالبقدونس والبصل',descEn:'Hand-rolled beef kofta with parsley and onion',price:85,img:P('kofta-skewer')},
+        {id:'d24',name:'مكرونة بشاميل',nameEn:'Bechamel Pasta',desc:'طبقات بشاميل بيتي ولحمة مفرومة وجبنة',descEn:'Layered bechamel with minced beef and cheese',price:70,img:P('bechamel-dish')}
+      ]},
+    '01000000003':{phone:'01000000003',kitchenName:'حلويات ماما سعاد',kitchenNameEn:"Mama Saad's Sweets",
+      bio:'حلويات شرقية بتعمل في بيتها كل يوم صبح.',bioEn:'Oriental sweets made fresh at home every morning.',
+      address:'8 شارع النصر، المعادي، القاهرة',logo:L('saad-sweets-kitchen'),dishes:[
+        {id:'d31',name:'أم علي',nameEn:'Om Ali',desc:'أم علي سخنة بالمكسرات والقشطة',descEn:'Warm Om Ali with nuts and cream',price:40,img:P('om-ali-bowl')},
+        {id:'d32',name:'كنافة بالمكسرات',nameEn:'Nutty Konafa',desc:'كنافة مقرمشة بوسطها مكسرات وعسل',descEn:'Crispy konafa filled with nuts and honey',price:55,img:P('konafa-plate')},
+        {id:'d33',name:'رز بلبن',nameEn:'Rice Pudding',desc:'رز بلبن مبرد بمزلية القرفة',descEn:'Chilled rice pudding topped with cinnamon',price:30,img:P('rice-pudding')},
+        {id:'d34',name:'بسبوسة بالقشطة',nameEn:'Basbousa',desc:'بسبوسة سخنة بقايمة قشطة بلدي',descEn:'Warm basbousa layered with clotted cream',price:35,img:P('basbousa-tray')}
+      ]}
+  };
+  const users = {};
+  Object.values(chefs).forEach(c=>{
+    users[c.phone] = {phone:c.phone, name:c.kitchenName.replace('مطبخ ','').replace('حلويات ',''), role:'chef', address:null};
+  });
+  return {users, chefs, orders:[], chats:{}, cart:[], session:null};
+}
+
+const me     = () => db.session ? db.users[db.session] : null;
+const myChef = () => (me() && me().role==='chef') ? db.chefs[db.session] : null;
+
+/* =========== الترجمة على الصفحة =========== */
+function applyI18n(){
+  document.documentElement.lang = lang;
+  document.documentElement.dir  = lang==='ar' ? 'rtl' : 'ltr';
+  document.title = lang==='ar' ? 'أكل ماما — أكل بيتي لحد باب شقتك' : "Mama's Kitchen — home food to your door";
+  $$('[data-i18n]').forEach(el => el.textContent = t(el.dataset.i18n));
+  const lb = $('#lang-btn'); if(lb) lb.textContent = lang==='ar' ? 'EN' : 'ع';
+}
+function setLang(l){ lang = l; localStorage.setItem('am_lang', l); applyI18n(); updateHeader(); go(current, currentParam); }
+function toggleLang(){ setLang(lang==='ar' ? 'en' : 'ar'); }
+
+/* =========== الهيدر والبادج =========== */
+function updateHeader(){
+  const slot = $('#auth-slot');
+  if(me()){
+    const m = me();
+    slot.innerHTML = `<button class="me-chip" onclick="go('profile')"><span class="me-av">${esc((m.name||'?').trim()[0]||'?')}</span><span class="me-name">${esc(m.name)}</span></button>`;
+  }else{
+    slot.innerHTML = `<button class="btn btn-sm btn-dark" onclick="openAuth()"><i class="ph-bold ph-whatsapp-logo"></i>${t('login')}</button>`;
+  }
+}
+function updateBadges(){
+  const n = db.cart.reduce((s,i)=>s+i.qty,0);
+  [$('#cart-badge'), $('#bn-badge')].forEach(b=>{
+    if(!b) return; b.textContent = n; b.classList.toggle('hide', !n);
+  });
+}
+
+/* =========== التنقل =========== */
+let current = 'home', currentParam = null;
+function go(v, param){
+  currentParam = param ?? currentParam;
+  if(['chat','orders','profile'].includes(v) && !me()){
+    toast(t('login_first'), 'ph-lock-simple'); openAuth(); return;
+  }
+  current = v;
+  $$('.view').forEach(s => s.classList.remove('active'));
+  const el = $('#view-'+v); if(el) el.classList.add('active');
+  $$('.bn').forEach(b => b.classList.toggle('active', b.dataset.v === v));
+  window.scrollTo({top:0, behavior:'smooth'});
+  const R = {home:renderHome, chefs:renderChefs, chef:()=>renderChef(currentParam), cart:renderCart, orders:renderOrders, chat:renderChat, profile:renderProfile};
+  (R[v] || renderHome)();
+  initReveal();
+}
+function ctaOrder(){
+  if(current !== 'home'){ go('home'); setTimeout(scrollMenu, 120); } else scrollMenu();
+}
+function scrollMenu(){ const m = $('#menu-sec'); if(m) m.scrollIntoView({behavior:'smooth', block:'start'}); }
+function ctaChef(){ if(me() && me().role==='chef'){ go('profile'); return; } openAuth(); }
+
+/* ظهور العناصر عند السكرول */
+const io = ('IntersectionObserver' in window) ? new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.1}) : null;
+function initReveal(){
+  if(!io){ $$('.rv').forEach(e=>e.classList.add('in')); return; }
+  $$('.rv:not(.in)').forEach(el => io.observe(el));
+}
+
+/* =========== الصور: اختيار + ضغط =========== */
+let pickCb = null;
+function pickImage(cb, max=700, q=.72){ pickCb = r => cb(r); pickMeta = {max,q}; const fp = $('#file-pick'); fp.value=''; fp.click(); }
+let pickMeta = {max:700, q:.72};
+ $('#file-pick').addEventListener('change', e=>{
+  const f = e.target.files[0]; if(!f || !pickCb) return;
+  const r = new FileReader();
+  r.onload = () => compress(r.result, pickMeta.max, pickMeta.q, pickCb);
+  r.readAsDataURL(f);
+});
+function compress(src, max, q, cb){
+  const img = new Image();
+  img.onload = () => {
+    const s = Math.min(1, max / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width*s); c.height = Math.round(img.height*s);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    cb(c.toDataURL('image/jpeg', q));
+  };
+  img.src = src;
+}
+
+/* =========== المودالات =========== */
+function openModal(html){
+  $('#modal-root').innerHTML = `<div class="overlay" onclick="if(event.target===this)closeModal()"><div class="modal">${html}</div></div>`;
+  document.body.classList.add('lock');
+}
+function closeModal(){ $('#modal-root').innerHTML = ''; document.body.classList.remove('lock'); }
+
+/* =========== تسجيل الدخول بواتساب =========== */
+let auth = {step:'phone', phone:'', code:'', role:'customer'};
+function openAuth(){
+  auth = {step:'phone', phone:'', code:'', role:'customer'};
+  openModal(`<button class="modal-x" onclick="closeModal()" aria-label="close"><i class="ph-bold ph-x"></i></button><div id="auth-body"></div>`);
+  renderAuth();
+}
+function renderAuth(){
+  const b = $('#auth-body'); if(!b){ openAuth(); return; }
+  if(auth.step === 'phone'){
+    b.innerHTML = `
+      <h3 class="lz">${t('auth_title')}</h3><p class="sub">${t('auth_sub')}</p>
+      <label class="fld">${t('phone_label')}
+        <input id="auth-phone" class="inp" dir="ltr" inputmode="numeric" placeholder="01xxxxxxxxx" onkeydown="if(event.key==='Enter')authSendCode()">
+      </label>
+      <button class="btn btn-wa" style="width:100%;margin-top:14px;justify-content:center" onclick="authSendCode()"><i class="ph-bold ph-whatsapp-logo"></i>${t('send_code')}</button>
+      <div class="demo-box"><i class="ph ph-info"></i> ${t('demo_hint')}</div>`;
+    $('#auth-phone').focus();
+  }
+  else if(auth.step === 'code'){
+    b.innerHTML = `
+      <h3 class="lz">${t('code_title')}</h3>
+      <p class="sub">${t('code_sent_to')} <b dir="ltr">${auth.phone}</b></p>
+      <div class="wa-bub">
+        <div class="wa-head"><i class="ph-fill ph-whatsapp-logo"></i><b>أكل ماما · Aklet Mama</b></div>
+        <p>${lang==='ar' ? 'كود التحقق بتاعك:' : 'Your verification code:'} <b class="wa-code">${auth.code}</b></p>
+        <button class="btn btn-sm btn-ghost" onclick="authFill()">${t('tap_fill')}</button>
+        <small class="demo-note">${t('demo_note')}</small>
+      </div>
+      <div class="code-row">${[0,1,2,3].map(i=>`<input class="code-inp" maxlength="1" inputmode="numeric" oninput="codeNext(this)" onkeydown="codeBack(event,this)">`).join('')}</div>
+      <button class="btn" style="width:100%;justify-content:center" onclick="authVerify()"><i class="ph-bold ph-check"></i>${t('verify')}</button>
+      <button class="btn btn-sm btn-ghost" style="width:100%;justify-content:center;margin-top:10px" onclick="authSendCode()"><i class="ph-bold ph-arrow-clockwise"></i>${t('resend')}</button>`;
+    $$('.code-inp')[0].focus();
+  }
+  else if(auth.step === 'role'){
+    b.innerHTML = `
+      <h3 class="lz">${t('choose_role')}</h3><p class="sub">${t('demo_hint')}</p>
+      <button class="role-opt" onclick="authPickRole('customer')"><span class="role-r"></span><span><b>${t('role_c')}</b><small>${t('role_c_d')}</small></span></button>
+      <button class="role-opt" onclick="authPickRole('chef')"><span class="role-r"></span><span><b>${t('role_ch')}</b><small>${t('role_ch_d')}</small></span></button>`;
+  }
+  else if(auth.step === 'profile'){
+    const chef = auth.role === 'chef';
+    b.innerHTML = `
+      <h3 class="lz">${chef ? t('role_ch') : t('role_c')}</h3><p class="sub">${t('code_sent_to')} <b dir="ltr">${auth.phone}</b></p>
+      <div class="stack">
+        <label class="fld">${t('your_name')}<input id="af-name" class="inp"></label>
+        ${chef ? `
+        <div style="display:flex;align-items:center;gap:14px">
+          <span class="k-av" style="--s:76px">
+            <img id="alogo-img" hidden alt="">
+            <b id="alogo-in">${esc((auth.kitchenName||'م')[0]||'م')}</b>
+          </span>
+          <button class="btn btn-sm btn-ghost" onclick="authPickLogo()"><i class="ph-bold ph-upload-simple"></i>${t('upload_logo')}</button>
+        </div>
+        <label class="fld">${t('kitchen_logo')}<small style="font-weight:400">${t('kitchen_logo')}</small>
+          <input id="af-kname" class="inp" placeholder="${t('kitchen_name')}">
+        </label>
+        <label class="fld">${t('kitchen_addr')}<input id="af-kaddr" class="inp"></label>`
+        : ''}
+      </div>
+      <button class="btn" style="width:100%;justify-content:center;margin-top:16px" onclick="authComplete()"><i class="ph-bold ph-check"></i>${t('continue')}</button>`;
+  }
+}
+let pendAuthLogo = null;
+function authPickLogo(){ pickImage(r => { pendAuthLogo = r; const i = $('#alogo-img'); if(i){ i.src = r; i.hidden = false; const n = $('#alogo-in'); if(n) n.hidden = true; } }, 300, .8); }
+function authSendCode(){
+  if(auth.step !== 'code'){
+    const ph = ($('#auth-phone')?.value || '').trim();
+    if(!/^01\d{9}$/.test(ph)){ toast(t('invalid_phone'), 'ph-warning'); return; }
+    auth.phone = ph;
+    auth.code  = String(Math.floor(1000 + Math.random()*9000));
+  }else{
+    auth.code = String(Math.floor(1000 + Math.random()*9000));
+  }
+  auth.step = 'code'; renderAuth();
+}
+function codeNext(el){ if(el.value && el.nextElementSibling?.classList.contains('code-inp')) el.nextElementSibling.focus(); }
+function codeBack(e, el){ if(e.key === 'Backspace' && !el.value){ const p = el.previousElementSibling; if(p?.classList.contains('code-inp')) p.focus(); } }
+function authFill(){ $$('.code-inp').forEach((inp,i)=> inp.value = auth.code[i]); }
+function authVerify(){
+  const entered = $$('.code-inp').map(i => i.value).join('');
+  if(entered !== auth.code){
+    $$('.code-inp').forEach(i => { i.classList.remove('err'); void i.offsetWidth; i.classList.add('err'); });
+    toast(t('wrong_code'), 'ph-warning'); return;
+  }
+  if(db.users[auth.phone]){
+    db.session = auth.phone; persist(); closeModal(); afterLogin();
+  }else{
+    auth.step = 'role'; renderAuth();
+  }
+}
+function authPickRole(r){ auth.role = r; auth.step = 'profile'; renderAuth(); }
+function authComplete(){
+  const name = ($('#af-name')?.value || '').trim();
+  const kname = ($('#af-kname')?.value || '').trim();
+  const kaddr = ($('#af-kaddr')?.value || '').trim();
+  if(!name || (auth.role==='chef' && (!kname || !kaddr))){ toast(t('fill_required'), 'ph-warning'); return; }
+  db.users[auth.phone] = {phone:auth.phone, name, role:auth.role, address:null};
+  if(auth.role === 'chef'){
+    db.chefs[auth.phone] = {phone:auth.phone, kitchenName:kname, kitchenNameEn:'', bio:'', address:kaddr, logo:pendAuthLogo || null, dishes:[]};
+  }
+  db.session = auth.phone; persist(); closeModal(); afterLogin();
+}
+function afterLogin(){
+  toast(`${t('welcome')} ${me().name}`, 'ph-heart');
+  updateHeader(); go(me().role==='chef' ? 'profile' : 'home');
+}
+function logout(){
+  db.session = null; persist(); updateHeader(); chatOpen = null;
+  toast(t('bye'), 'ph-hand-waving'); go('home');
+}
+
+/* =========== بناء العناصر المشتركة =========== */
+function chefAvatar(c, s=58){
+  return `<span class="k-av" style="--s:${s}px">${c.logo ? `<img src="${esc(c.logo)}" alt="">` : `<b>${esc((c.kitchenName||'?').trim()[0]||'?')}</b>`}</span>`;
+}
+function stChip(st){
+  const map = {awaiting:['status_awaiting','chip-gold','ph-clock'], review:['status_review','chip-terra','ph-clock'], confirmed:['status_confirmed','chip-olive','ph-fire']};
+  const m = map[st] || map.awaiting;
+  return `<span class="chip ${m[1]}"><i class="ph-fill ${m[2]}"></i>${t(m[0])}</span>`;
+}
+function addrLine(a){
+  if(!a || !a.street) return '—';
+  return lang==='ar'
+    ? `${a.street} — عمارة ${a.building}، دور ${a.floor}، شقة ${a.apt}`
+    : `${a.street} — Bldg ${a.building}, Floor ${a.floor}, Apt ${a.apt}`;
+}
+function dishRow(ch, d){
+  return `<div class="dish">
+    <img src="${esc(d.img || FALLBACK)}" alt="${esc(dishName(d))}" loading="lazy" onerror="this.src='${FALLBACK}'">
+    <div class="d-info"><div class="d-name">${esc(dishName(d))}</div><div class="d-desc">${esc(dishDesc(d))}</div></div>
+    <div class="d-lead"></div>
+    <div class="d-price">${d.price} <span>${t('egp_cur')}</span></div>
+    <button class="addbtn" onclick="addToCart('${ch.phone}','${d.id}',this)" aria-label="${t('added_to_cart')}"><i class="ph-bold ph-plus"></i></button>
+  </div>`;
+}
+function menuGroupHTML(c){
+  return `<div class="mgroup rv">
+    <div class="mg-head">${chefAvatar(c,46)}
+      <div><div class="mg-name">${t('from_kitchen')} ${esc(chefName(c))}</div>
+      <div class="mg-loc"><i class="ph ph-map-pin"></i>${esc(c.address||'')}</div></div>
+      <button class="btn btn-sm btn-ghost mg-go" onclick="go('chef','${c.phone}')">${t('view_menu')}</button>
+    </div>
+    ${c.dishes.map(d => dishRow(c,d)).join('')}
+  </div>`;
+}
+function kcard(c){
+  return `<div class="kcard" onclick="go('chef','${c.phone}')">
+    <div class="k-top">${chefAvatar(c,58)}
+      <div><div class="k-name">${esc(chefName(c))}</div>
+      <div class="mg-loc"><i class="ph ph-map-pin"></i>${esc(c.address||'')}</div></div>
+    </div>
+    <p class="k-bio">${esc(lang==='en' && c.bioEn ? c.bioEn : (c.bio||''))}</p>
+    <div class="k-meta"><span class="chip chip-gold"><i class="ph-fill ph-fork-knife"></i>${c.dishes.length} ${t('dishes_n')}</span></div>
+    <div class="k-btns">
+      <button class="btn btn-sm" onclick="event.stopPropagation();go('chef','${c.phone}')"><i class="ph ph-notebook"></i>${t('view_menu')}</button>
+      <button class="btn btn-sm btn-ghost" onclick="event.stopPropagation();chatWith('${c.phone}')"><i class="ph-bold ph-chat-circle-dots"></i>${t('chat_short')}</button>
+      <a class="btn btn-sm btn-wa" href="https://wa.me/2${c.phone}?text=${encodeURIComponent(t('wa_hi'))}" target="_blank" rel="noopener" onclick="event.stopPropagation()"><i class="ph-bold ph-whatsapp-logo"></i></a>
+    </div>
+  </div>`;
+}
+
+/* =========== الرئيسية =========== */
+function renderHome(){
+  const chefs = Object.values(db.chefs);
+  const nD = chefs.reduce((s,c)=>s+c.dishes.length,0);
+  $('#hero-stats').innerHTML = `
+    <span><b>${chefs.length}</b>${t('stat_kitchens')}</span>
+    <span><b>${nD}</b>${t('stat_dishes')}</span>
+    <span><b>${DELIVERY} ${t('egp_cur')}</b>${t('stat_deliv')}</span>`;
+  // الشريط المتحرك من أسماء الأطباق الفعلية
+  let names = chefs.flatMap(c => c.dishes.map(dishName));
+  if(!names.length) names = [t('menu_title')];
+  while(names.length < 8) names = names.concat(names);
+  const loop = names.concat(names);
+  $('#ticker-track').innerHTML = loop.map(n => `<span class="tk">${esc(n)}</span><i class="ph-fill ph-cooking-pot tk-ic"></i>`).join('');
+  // المنيو + المطابخ
+  const withDishes = chefs.filter(c => c.dishes.length);
+  $('#home-menu').innerHTML = withDishes.length
+    ? withDishes.map(menuGroupHTML).join('')
+    : `<div class="empty"><i class="ph ph-cooking-pot"></i><p>${t('empty_menu')}</p></div>`;
+  $('#home-chefs').innerHTML = chefs.length
+    ? chefs.slice(0,4).map(kcard).join('')
+    : `<div class="empty"><p>${t('no_chefs')}</p></div>`;
+}
+function boil(){
+  const s = $('#pot-scene'); if(!s) return;
+  s.classList.remove('boil'); void s.offsetWidth; s.classList.add('boil');
+}
+
+/* =========== صفحات المطابخ =========== */
+function renderChefs(){
+  const cs = Object.values(db.chefs);
+  $('#view-chefs').innerHTML = `
+    <h2 class="sec-t"><span>${t('chefs_title')}</span><span class="squig"></span></h2>
+    <p class="sec-sub">${t('chefs_sub')}</p>
+    <div class="kgrid">${cs.map(kcard).join('') || `<div class="empty"><p>${t('no_chefs')}</p></div>`}</div>`;
+}
+function renderChef(ph){
+  const c = db.chefs[ph];
+  if(!c){ toast(t('no_chefs'), 'ph-warning'); return go('chefs'); }
+  $('#view-chef').innerHTML = `
+    <button class="btn btn-sm btn-ghost" onclick="go('chefs')" style="margin-bottom:16px"><i class="ph-bold ${backIc()}"></i>${t('back')}</button>
+    <div class="card" style="padding:24px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      ${chefAvatar(c,86)}
+      <div style="flex:1;min-width:220px">
+        <h2 class="lz" style="font-size:1.9rem">${esc(chefName(c))}</h2>
+        <p style="color:var(--ink2);font-size:.9rem">${esc(lang==='en' && c.bioEn ? c.bioEn : (c.bio||''))}</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <span class="chip chip-gold"><i class="ph ph-map-pin"></i>${esc(c.address||'')}</span>
+          <a class="chip chip-terra" dir="ltr" href="tel:${c.phone}" style="text-decoration:none;color:inherit"><i class="ph ph-phone"></i>${c.phone}</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" onclick="chatWith('${c.phone}')"><i class="ph-bold ph-chat-circle-dots"></i>${t('chat_with_chef')}</button>
+        <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/2${c.phone}?text=${encodeURIComponent(t('wa_hi'))}"><i class="ph-bold ph-whatsapp-logo"></i>${t('open_wa')}</a>
+      </div>
+    </div>
+    <div class="card menu-board rv" style="margin-top:22px">
+      <h3 class="mt-t"><i class="ph-fill ph-cooking-pot"></i>${t('view_menu')}</h3>
+      ${c.dishes.map(d => dishRow(c,d)).join('') || `<div class="empty"><p>${t('no_dishes')}</p></div>`}
+    </div>`;
+}
+
+/* =========== السلة =========== */
+function addToCart(chefPhone, dishId, btn){
+  const d = db.chefs[chefPhone]?.dishes.find(x => x.id === dishId);
+  if(!d) return;
+  let it = db.cart.find(i => i.chefPhone === chefPhone && i.dishId === dishId);
+  if(it) it.qty++; else db.cart.push({chefPhone, dishId, name:dishName(d), price:d.price, img:d.img, qty:1});
+  persist(); updateBadges();
+  if(btn){ btn.classList.remove('pop'); void btn.offsetWidth; btn.classList.add('pop'); }
+  toast(t('added_to_cart'), 'ph-basket');
+}
+function chQty(i, d){ const it = db.cart[i]; if(!it) return; it.qty += d; if(it.qty < 1) db.cart.splice(i,1); persist(); updateBadges(); renderCart(); }
+function rmCart(i){ db.cart.splice(i,1); persist(); updateBadges(); renderCart(); }
+
+let co = {step:1, receipt:null};
+function renderCart(){
+  const v = $('#view-cart');
+  if(!db.cart.length){
+    v.innerHTML = `<div class="empty"><i class="ph ph-basket"></i><h3 class="lz">${t('cart_empty_t')}</h3><p>${t('cart_empty_d')}</p><button class="btn" onclick="ctaOrder()"><i class="ph-fill ph-fork-knife"></i>${t('browse_menu')}</button></div>`;
+    return;
+  }
+  const sub = db.cart.reduce((s,i)=>s + i.price*i.qty, 0);
+  const tot = sub + DELIVERY;
+  const lines = db.cart.map((it,i)=>{
+    const c = db.chefs[it.chefPhone];
+    return `<div class="c-item">
+      <img src="${esc(it.img || FALLBACK)}" alt="" onerror="this.src='${FALLBACK}'">
+      <div class="d-info"><div class="d-name" style="font-size:1rem">${esc(it.name)}</div><div class="c-kitchen">${esc(c ? chefName(c) : '')}</div></div>
+      <div class="qty">
+        <button onclick="chQty(${i},-1)" aria-label="-"><i class="ph-bold ph-minus"></i></button>
+        <b>${it.qty}</b>
+        <button onclick="chQty(${i},1)" aria-label="+"><i class="ph-bold ph-plus"></i></button>
+      </div>
+      <div class="d-price">${it.price*it.qty} <span>${t('egp_cur')}</span></div>
+      <button class="addbtn" style="background:var(--terra-soft);color:var(--terra-d)" onclick="rmCart(${i})" aria-label="remove"><i class="ph-bold ph-trash"></i></button>
+    </div>`;
+  }).join('');
+
+  let coHtml = '';
+  if(!me()){
+    coHtml = `<div class="card co-login"><i class="ph ph-lock-simple"></i><p>${t('login_required')}</p><button class="btn" onclick="openAuth()"><i class="ph-bold ph-whatsapp-logo"></i>${t('login_first')}</button></div>`;
+  }else{
+    const steps = `<div class="steps">${[t('step_addr'),t('step_pay'),t('step_confirm')].map((n,i)=>
+      `<div class="stp ${co.step > i+1 ? 'done' : co.step === i+1 ? 'on' : ''}"><span class="dot">${co.step > i+1 ? '<i class="ph-bold ph-check"></i>' : i+1}</span><small>${n}</small></div>${i<2?'<span class="stp-line"></span>':''}`).join('')}</div>`;
+
+    if(co.step === 1){
+      const a = me().address || {};
+      coHtml = steps + `<div class="card co-card">
+        <h4 class="co-t"><i class="ph ph-map-pin"></i>${t('step_addr')}</h4>
+        <div class="stack">
+          <label class="fld">${t('street')}<input id="ad-street" class="inp" value="${esc(a.street||'')}"></label>
+          <div class="f2">
+            <label class="fld">${t('building')}<input id="ad-building" class="inp" value="${esc(a.building||'')}"></label>
+            <label class="fld">${t('floor')}<input id="ad-floor" class="inp" value="${esc(a.floor||'')}"></label>
+          </div>
+          <div class="f2">
+            <label class="fld">${t('apt')}<input id="ad-apt" class="inp" value="${esc(a.apt||'')}"></label>
+            <label class="fld">${t('notes')}<input id="ad-notes" class="inp" value="${esc(a.notes||'')}"></label>
+          </div>
+        </div>
+        <div class="co-nav"><button class="btn" onclick="addrNext()">${t('next')} <i class="ph-bold ${nextIc()}"></i></button></div>
+      </div>`;
+    }
+    else if(co.step === 2){
+      coHtml = steps + `
+        <div class="pay-amt"><small>${t('pay_amount')}</small><b>${tot} ${t('egp_cur')}</b></div>
+        <div class="card pay-card">
+          <div class="vf"><span class="vf-mark">vf</span><b>Vodafone Cash</b></div>
+          <div class="pay-num"><span dir="ltr">${PAY_NUMBER}</span><button class="icon-btn" style="width:36px;height:36px" onclick="copyTxt('${PAY_NUMBER}')" aria-label="${t('copy')}"><i class="ph ph-copy"></i></button></div>
+          <a class="btn" href="${PAY_LINK}" target="_blank" rel="noopener"><i class="ph-bold ph-device-mobile"></i>${t('open_pay')}</a>
+          <div class="qr-box"><div id="qr"></div><small>${t('scan_qr')}</small></div>
+          <button class="btn btn-sm btn-ghost" onclick="copyTxt('${PAY_LINK}')"><i class="ph ph-link"></i>${t('copy')} — ${t('pay_link')}</button>
+        </div>
+        <ol class="pay-how"><li>${t('pay_how1')}</li><li>${t('pay_how2')}</li><li>${t('pay_how3')}</li></ol>
+        <p class="note"><i class="ph-fill ph-warning"></i>${t('pay_note')}</p>
+        <div class="co-nav">
+          <button class="btn btn-ghost" onclick="co.step=1;renderCart()"><i class="ph-bold ${backIc()}"></i>${t('back')}</button>
+          <button class="btn" onclick="co.step=3;renderCart()">${t('next')} <i class="ph-bold ${nextIc()}"></i></button>
+        </div>`;
+    }
+    else{
+      const a = me().address || {};
+      coHtml = steps + `<div class="card co-card">
+        <h4 class="co-t"><i class="ph ph-receipt"></i>${t('step_confirm')}</h4>
+        <div class="succ-rows" style="margin:0 0 14px">
+          <div style="display:flex;justify-content:space-between"><small>${t('total')}</small><b style="color:var(--terra)">${tot} ${t('egp_cur')}</b></div>
+          <div><small>${t('step_addr')}</small><div>${esc(addrLine(a))}</div></div>
+        </div>
+        <div class="dz ${co.receipt ? 'has' : ''}" onclick="pickCoReceipt()">
+          ${co.receipt
+            ? `<img src="${co.receipt}" alt="${t('receipt_title')}"><button class="dz-x" onclick="event.stopPropagation();co.receipt=null;renderCart()"><i class="ph-bold ph-x"></i></button>`
+            : `<i class="ph ph-upload-simple"></i><b>${t('choose_img')}</b><small>${t('receipt_title')}</small>`}
+        </div>
+        <p class="note"><i class="ph-fill ph-warning"></i>${t('receipt_optional_d')}</p>
+        <div class="co-nav">
+          <button class="btn btn-ghost" onclick="co.step=2;renderCart()"><i class="ph-bold ${backIc()}"></i>${t('back')}</button>
+          <button class="btn" onclick="placeOrder()"><i class="ph-bold ph-check"></i>${t('confirm_order')}</button>
+        </div>
+      </div>`;
+    }
+  }
+
+  v.innerHTML = `
+    <h2 class="sec-t"><span>${t('cart_title')}</span><span class="squig"></span></h2>
+    <div class="cart-grid">
+      <div>${lines}
+        <div class="card sum">
+          <div class="s-row"><span>${t('subtotal')}</span><b>${sub} ${t('egp_cur')}</b></div>
+          <div class="s-row"><span>${t('delivery')}</span><b>${DELIVERY} ${t('egp_cur')}</b></div>
+          <div class="s-row tot"><span>${t('total')}</span><b>${tot} ${t('egp_cur')}</b></div>
+        </div>
+      </div>
+      <div>${coHtml}</div>
+    </div>`;
+  if(co.step === 2 && me()) requestAnimationFrame(makeQR);
+}
+function addrNext(){
+  const g = id => ($(id)?.value || '').trim();
+  const street = g('#ad-street'), building = g('#ad-building'), floor = g('#ad-floor'), apt = g('#ad-apt'), notes = g('#ad-notes');
+  if(!street || !building || !floor || !apt){ toast(t('fill_address'), 'ph-warning'); return; }
+  me().address = {street, building, floor, apt, notes};
+  persist(); co.step = 2; renderCart();
+}
+function pickCoReceipt(){ pickImage(r => { co.receipt = r; renderCart(); }, 900, .8); }
+function makeQR(){
+  const el = $('#qr'); if(!el) return;
+  el.innerHTML = '';
+  if(window.QRCode){
+    try{ new QRCode(el, {text:PAY_LINK, width:116, height:116, colorDark:'#2A1B12', colorLight:'#FFFBEF', correctLevel:QRCode.CorrectLevel.M}); }catch(e){}
+  }
+}
+function copyTxt(s){
+  const done = () => toast(t('copied'), 'ph-copy');
+  if(navigator.clipboard){ navigator.clipboard.writeText(s).then(done).catch(done); }
+  else{
+    const i = document.createElement('textarea'); i.value = s;
+    document.body.appendChild(i); i.select(); document.execCommand('copy'); i.remove(); done();
+  }
+}
+
+/* =========== إنشاء الأوردر =========== */
+function placeOrder(){
+  if(!db.cart.length || !me()) return;
+  const a = me().address || {};
+  const items = db.cart.map(i => ({...i}));
+  const sub = items.reduce((s,i)=>s + i.price*i.qty, 0);
+  const o = {
+    id:'AM-' + (1000 + Math.floor(Math.random()*9000)),
+    phone:me().phone, name:me().name, items,
+    sub, delivery:DELIVERY, total:sub + DELIVERY,
+    address:{...a}, status: co.receipt ? 'review' : 'awaiting',
+    receipt: co.receipt || null, createdAt: Date.now()
+  };
+  db.orders.unshift(o);
+  db.cart = []; co = {step:1, receipt:null};
+  persist(); updateBadges();
+  pushMsg(chatKey(o.phone, SUPPORT), {from:o.phone, text: lang==='ar' ? `أوردر جديد ${o.id} — الإجمالي ${o.total} ج.م` : `New order ${o.id} — total ${o.total} EGP`, t:Date.now()});
+  supportAutoReply(o);
+  openSuccess(o);
+}
+function waText(o){
+  return lang==='ar'
+    ? `أهلاً أكل ماما، أنا ${o.name}.\nرقم الأوردر: ${o.id}\nالإجمالي: ${o.total} ج.م (فودافون كاش)\nوبعت لحضرتك إيصال الدفع.`
+    : `Hi Aklet Mama, I'm ${o.name}.\nOrder no: ${o.id}\nTotal: ${o.total} EGP (Vodafone Cash)\nSending you the payment receipt.`;
+}
+function waSendReceipt(id){
+  const o = db.orders.find(x => x.id === id); if(!o) return;
+  window.open('https://wa.me/' + WA_PLATFORM + '?text=' + encodeURIComponent(waText(o)), '_blank');
+}
+function supportAutoReply(o){
+  setTimeout(()=>{
+    const txt = (o.status === 'review' ? t('supp_receipt_ok') : t('supp_wait_receipt')).replace('{id}', o.id);
+    pushMsg(chatKey(o.phone, SUPPORT), {from:SUPPORT, text:txt, t:Date.now()});
+    if(current === 'chat' && chatOpen) renderChat();
+  }, 1500);
+}
+function attachReceipt(o){
+  o.receipt = co.receiptSafe || null; // (غير مستخدم — شيلتها)
+}
+function openSuccess(o){
+  openModal(`<div class="succ">
+    <div class="succ-ic"><i class="ph-fill ph-check-fat"></i></div>
+    <h3 class="lz">${t('order_placed')}</h3>
+    <div class="stamp">${o.id}</div>
+    <div class="succ-rows">
+      <div style="display:flex;justify-content:space-between"><small>${t('total')}</small><b style="color:var(--terra)">${o.total} ${t('egp_cur')}</b></div>
+      <div><small>${t('step_addr')}</small><div>${esc(addrLine(o.address))}</div></div>
+    </div>
+    <div class="succ-rec">
+      ${o.receipt
+        ? `<img src="${o.receipt}" alt="${t('receipt')}"><span class="chip chip-olive"><i class="ph-fill ph-check"></i>${t('receipt_ok')}</span>`
+        : `<div class="dz" onclick="succUpload('${o.id}')"><i class="ph ph-upload-simple"></i><b>${t('upload_here')}</b></div><span class="chip chip-gold"><i class="ph-fill ph-clock"></i>${t('receipt_missing')}</span>`}
+    </div>
+    <p class="note"><i class="ph-fill ph-warning"></i>${t('receipt_must')}</p>
+    <div class="succ-btns">
+      <button class="btn btn-wa" style="width:100%;justify-content:center" onclick="waSendReceipt('${o.id}')"><i class="ph-bold ph-whatsapp-logo"></i>${t('send_receipt_wa')}</button>
+      <button class="btn btn-ghost" onclick="closeModal();openChatWith('${SUPPORT}')"><i class="ph-bold ph-headset"></i>${t('support_chat')}</button>
+      <button class="btn btn-ghost" onclick="closeModal()">${t('keep_browsing')}</button>
+    </div>
+  </div>`);
+}
+function succUpload(id){
+  pickImage(r=>{
+    const o = db.orders.find(x => x.id === id); if(!o) return;
+    o.receipt = r; o.status = 'review'; persist();
+    pushMsg(chatKey(o.phone, SUPPORT), {from:o.phone, text:(lang==='ar' ? `بعت إيصال الأوردر ${o.id} من جوه المنصة` : `Sent receipt for order ${o.id} from within the platform`), t:Date.now()});
+    supportAutoReply(o);
+    toast(t('receipt_uploaded'), 'ph-check-circle');
+    if($('#modal-root').innerHTML) openSuccess(o);
+  }, 900, .8);
+}
+function uploadReceipt(id){
+  pickImage(r=>{
+    const o = db.orders.find(x => x.id === id); if(!o) return;
+    o.receipt = r; o.status = 'review'; persist();
+    pushMsg(chatKey(o.phone, SUPPORT), {from:o.phone, text:(lang==='ar' ? `بعت إيصال الأوردر ${o.id} من جوه المنصة` : `Sent receipt for order ${o.id} from within the platform`), t:Date.now()});
+    supportAutoReply(o);
+    toast(t('receipt_uploaded'), 'ph-check-circle');
+    if(current === 'orders') renderOrders();
+  }, 900, .8);
+}
+
+/* =========== الأوردرات =========== */
+function renderOrders(){
+  const v = $('#view-orders'), m = me();
+  if(m.role === 'chef'){
+    const mine = db.orders.filter(o => o.items.some(i => i.chefPhone === m.phone));
+    v.innerHTML = `<h2 class="sec-t"><span>${t('incoming')}</span><span class="squig"></span></h2>` +
+      (mine.length ? mine.map(o => chefOrderCard(o)).join('')
+                   : `<div class="empty"><i class="ph ph-package"></i><p>${t('no_orders')}</p></div>`);
+  }else{
+    const mine = db.orders.filter(o => o.phone === m.phone);
+    v.innerHTML = `<h2 class="sec-t"><span>${t('my_orders')}</span><span class="squig"></span></h2>` +
+      (mine.length ? mine.map(orderCardC).join('')
+                   : `<div class="empty"><i class="ph ph-package"></i><p>${t('no_orders')}</p><button class="btn" onclick="ctaOrder()">${t('browse_menu')}</button></div>`);
+  }
+}
+function orderCardC(o){
+  return `<div class="card o-card rv">
+    <div class="o-head"><span class="o-id">${o.id}</span>${stChip(o.status)}<span class="o-date">${fmtDate(o.createdAt)}</span></div>
+    <div class="o-items">${o.items.map(i => `<div class="o-line"><span>${i.qty}× ${esc(i.name)}</span><b>${i.qty*i.price} ${t('egp_cur')}</b></div>`).join('')}</div>
+    <div class="o-total">${t('total')}: <b>${o.total} ${t('egp_cur')}</b></div>
+    <div class="o-addr"><i class="ph ph-map-pin"></i>${esc(addrLine(o.address))}</div>
+    <div class="o-actions">
+      ${o.receipt ? `<img class="rc-thumb" src="${o.receipt}" alt="${t('receipt')}">` : ''}
+      ${o.status === 'awaiting' ? `<button class="btn btn-sm btn-gold" onclick="uploadReceipt('${o.id}')"><i class="ph-bold ph-upload-simple"></i>${t('upload_here')}</button>` : ''}
+      <button class="btn btn-sm btn-wa" onclick="waSendReceipt('${o.id}')"><i class="ph-bold ph-whatsapp-logo"></i>${t('send_wa')}</button>
+      <button class="btn btn-sm btn-ghost" onclick="openChatWith('${SUPPORT}')"><i class="ph-bold ph-headset"></i>${t('support_chat')}</button>
+    </div>
+  </div>`;
+}
+function chefOrderCard(o){
+  const items = o.items.filter(i => i.chefPhone === me().phone);
+  const sub = items.reduce((s,i)=>s + i.price*i.qty, 0);
+  const waMsg = lang==='ar' ? `أهلاً يا ${o.name}، معاك ${chefName(myChef())} من أكل ماما بخصوص أوردر ${o.id}.` : `Hi ${o.name}, ${chefName(myChef())} here from Aklet Mama about order ${o.id}.`;
+  return `<div class="card o-card rv">
+    <div class="o-head"><span class="o-id">${o.id}</span>${stChip(o.status)}<span class="o-date">${fmtDate(o.createdAt)}</span></div>
+    <div class="o-cust"><i class="ph ph-user"></i>${t('customer')}: <b>${esc(o.name)}</b><a dir="ltr" href="tel:${o.phone}" style="color:var(--terra)">${o.phone}</a></div>
+    <div class="o-items">${items.map(i => `<div class="o-line"><span>${i.qty}× ${esc(i.name)}</span><b>${i.qty*i.price} ${t('egp_cur')}</b></div>`).join('')}</div>
+    <div class="o-addr"><i class="ph ph-map-pin"></i>${esc(addrLine(o.address))}</div>
+    <div class="o-total">${t('total')}: <b>${sub} ${t('egp_cur')}</b></div>
+    ${o.receipt ? `<img class="rc-thumb" src="${o.receipt}" alt="${t('receipt')}">` : ''}
+    <div class="o-actions">
+      ${o.status !== 'confirmed' ? `<button class="btn btn-sm btn-gold" onclick="chefConfirm('${o.id}')"><i class="ph-fill ph-fire"></i>${t('confirm_o')}</button>` : ''}
+      <button class="btn btn-sm btn-ghost" onclick="chatWith('${o.phone}')"><i class="ph-bold ph-chat-circle-dots"></i>${t('chat_short')}</button>
+      <a class="btn btn-sm btn-wa" target="_blank" rel="noopener" href="https://wa.me/2${o.phone}?text=${encodeURIComponent(waMsg)}"><i class="ph-bold ph-whatsapp-logo"></i>${t('send_wa')}</a>
+    </div>
+  </div>`;
+}
+function chefConfirm(id){
+  const o = db.orders.find(x => x.id === id); if(!o) return;
+  o.status = 'confirmed'; persist(); renderOrders();
+  toast(t('order_confirmed'), 'ph-fire');
+}
+
+/* =========== الشات =========== */
+let chatOpen = null;
+const chatKey = (a,b) => [a,b].sort().join('|');
+const otherOf = k => { const [a,b] = k.split('|'); return a === db.session ? b : a; };
+function pushMsg(key, msg){ (db.chats[key] ??= []).push(msg); persist(); }
+function partnerInfo(ph){
+  if(ph === SUPPORT) return {name:t('support'), img:null, icon:'ph-headset'};
+  const u = db.users[ph]; if(!u) return {name:ph, img:null};
+  if(u.role === 'chef'){ const c = db.chefs[ph]; return {name:c ? chefName(c) : u.name, img:c?.logo || null}; }
+  return {name:u.name, img:null};
+}
+function chatWith(ph){
+  if(!me()){ toast(t('login_first'), 'ph-lock-simple'); openAuth(); return; }
+  openChatWith(ph);
+}
+function openChatWith(ph){
+  chatOpen = chatKey(me().phone, ph);
+  if(ph === SUPPORT && !(db.chats[chatOpen] || []).length){
+    pushMsg(chatOpen, {from:SUPPORT, text:t('supp_hello'), t:Date.now()});
+  }
+  go('chat');
+}
+function bub(m){
+  const mine = m.from === me().phone;
+  return `<div class="bub ${mine ? 'me' : 'them'}">${esc(m.text)}<span class="bub-t">${fmtTime(m.t || Date.now())}</span></div>`;
+}
+function renderChat(){
+  const v = $('#view-chat'), m = me(); if(!m) return;
+  const keys = Object.keys(db.chats).filter(k => k.split('|').includes(m.phone));
+  const listHtml = keys.length ? keys.map(k=>{
+    const msgs = db.chats[k], last = msgs[msgs.length-1];
+    const p = partnerInfo(otherOf(k));
+    return `<button class="chat-item ${chatOpen === k ? 'on' : ''}" onclick="openThread('${k}')">
+      <span class="chat-av">${p.img ? `<img src="${esc(p.img)}" alt="">` : `<i class="ph-fill ${p.icon || 'ph-user'}"></i>`}</span>
+      <span class="chat-mid"><b>${esc(p.name)}</b><small>${esc(last.text).slice(0,46)}</small></span>
+      <span class="chat-time">${fmtTime(last.t || Date.now())}</span>
+    </button>`;
+  }).join('') : `<div class="empty" style="padding:26px 12px"><i class="ph ph-chat-circle-dots"></i><p style="font-size:.82rem">${t('no_chats')}</p></div>`;
+
+  let threadHtml;
+  if(chatOpen && db.chats[chatOpen]){
+    const other = otherOf(chatOpen), p = partnerInfo(other);
+    const waNum = other === SUPPORT ? WA_PLATFORM : '2' + other;
+    threadHtml = `<div class="chat-thread">
+      <div class="th-head">
+        <button class="icon-btn chat-back" onclick="chatOpen=null;renderChat()" aria-label="${t('back')}"><i class="ph-bold ${backIc()}"></i></button>
+        <span class="chat-av">${p.img ? `<img src="${esc(p.img)}" alt="">` : `<i class="ph-fill ${p.icon || 'ph-user'}"></i>`}</span>
+        <div class="th-name"><b>${esc(p.name)}</b><small dir="ltr">${other === SUPPORT ? PAY_NUMBER : other}</small></div>
+        <a class="btn btn-sm btn-wa" target="_blank" rel="noopener" href="https://wa.me/${waNum}?text=${encodeURIComponent(t('wa_thread'))}"><i class="ph-bold ph-whatsapp-logo"></i><span class="hide-sm">${t('open_wa')}</span></a>
+      </div>
+      <div class="msgs" id="msgs">${db.chats[chatOpen].map(bub).join('')}</div>
+      <div class="th-inp">
+        <input id="msg-inp" class="inp" placeholder="${t('type_msg')}" onkeydown="if(event.key==='Enter')sendMsg()">
+        <button class="btn" onclick="sendMsg()" aria-label="send"><i class="ph-bold ph-paper-plane-tilt"></i></button>
+      </div>
+    </div>`;
+  }else{
+    threadHtml = `<div class="chat-thread th-empty"><i class="ph ph-chat-circle-dots"></i><p>${t('pick_chat')}</p></div>`;
+  }
+
+  v.innerHTML = `<h2 class="sec-t"><span>${t('chat_title')}</span><span class="squig"></span></h2>
+    <div class="chat-wrap ${chatOpen && db.chats[chatOpen] ? 'threading' : ''}">
+      <div class="card chat-list">${listHtml}</div>${threadHtml}
+    </div>`;
+  const box = $('#msgs'); if(box) box.scrollTop = box.scrollHeight;
+}
+function openThread(k){ chatOpen = k; renderChat(); }
+function sendMsg(){
+  const inp = $('#msg-inp'); const val = (inp?.value || '').trim();
+  if(!val || !chatOpen) return;
+  pushMsg(chatOpen, {from:me().phone, text:val, t:Date.now()});
+  inp.value = ''; renderChat(); $('#msg-inp')?.focus();
+  if(chatOpen.includes(SUPPORT)){
+    setTimeout(()=>{
+      pushMsg(chatOpen, {from:SUPPORT, text:t('supp_generic'), t:Date.now()});
+      if(current === 'chat' && chatOpen) renderChat();
+    }, 1300);
+  }
+}
+
+/* =========== البروفايل / لوحة الشيف =========== */
+let pendKLogo = null, dishImg = null;
+function renderProfile(){
+  const v = $('#view-profile'), m = me();
+  if(m.role === 'chef'){ renderChefDash(v, m); return; }
+  const a = m.address || {};
+  const myOrders = db.orders.filter(o => o.phone === m.phone);
+  v.innerHTML = `
+    <h2 class="sec-t"><span>${t('nav_profile')}</span><span class="squig"></span></h2>
+    <div class="prof-grid">
+      <div class="card p-card">
+        <div class="p-head">
+          <span class="p-av">${esc((m.name||'?').trim()[0]||'?')}</span>
+          <div><div class="p-name">${esc(m.name)}</div>
+          <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">
+            <span class="chip chip-terra"><i class="ph-fill ph-user"></i>${t('role_c')}</span>
+            <span class="chip" dir="ltr"><i class="ph ph-phone"></i>${m.phone}</span>
+          </div></div>
+        </div>
+        <h4 class="mini-title"><i class="ph ph-map-pin"></i>${t('my_address')}</h4>
+        <div class="stack">
+          <label class="fld">${t('street')}<input id="pf-street" class="inp" value="${esc(a.street||'')}"></label>
+          <div class="f2">
+            <label class="fld">${t('building')}<input id="pf-building" class="inp" value="${esc(a.building||'')}"></label>
+            <label class="fld">${t('floor')}<input id="pf-floor" class="inp" value="${esc(a.floor||'')}"></label>
+          </div>
+          <div class="f2">
+            <label class="fld">${t('apt')}<input id="pf-apt" class="inp" value="${esc(a.apt||'')}"></label>
+            <label class="fld">${t('notes')}<input id="pf-notes" class="inp" value="${esc(a.notes||'')}"></label>
+          </div>
+        </div>
+        <div class="co-nav">
+          <button class="btn" onclick="saveProfileAddr()"><i class="ph-bold ph-check"></i>${t('save_addr')}</button>
+          <button class="btn btn-ghost" onclick="logout()"><i class="ph-bold ph-sign-out"></i>${t('logout')}</button>
+        </div>
+      </div>
+      <div>
+        <h4 class="mini-title"><i class="ph ph-package"></i>${t('my_orders')}</h4>
+        ${myOrders.length ? myOrders.slice(0,3).map(orderCardC).join('') + `<button class="btn btn-sm btn-ghost" onclick="go('orders')">${t('view_all')}</button>`
+          : `<div class="card" style="padding:24px;text-align:center;color:var(--ink2)">${t('no_orders')}</div>`}
+      </div>
+    </div>`;
+}
+function saveProfileAddr(){
+  const g = id => ($(id)?.value || '').trim();
+  me().address = {street:g('#pf-street'), building:g('#pf-building'), floor:g('#pf-floor'), apt:g('#pf-apt'), notes:g('#pf-notes')};
+  persist(); toast(t('profile_saved'), 'ph-check-circle');
+}
+function renderChefDash(v, m){
+  const c = myChef(); if(!c) return;
+  const incoming = db.orders.filter(o => o.items.some(i => i.chefPhone === m.phone));
+  v.innerHTML = `
+    <h2 class="sec-t"><span>${t('chef_dash')}</span><span class="squig"></span></h2>
+    <div class="stats" style="margin-top:14px">
+      <div class="stat-b"><b>${c.dishes.length}</b><small>${t('my_dishes')}</small></div>
+      <div class="stat-b"><b>${incoming.length}</b><small>${t('incoming')}</small></div>
+      <div class="stat-b"><b>${c.dishes.length ? '✓' : '—'}</b><small>${t('my_kitchen')}</small></div>
+    </div>
+    <div class="dash">
+      <div class="dash-col">
+        <div class="card p-card">
+          <div class="p-head">
+            <span class="klogo-wrap">
+              <span class="k-av" style="--s:86px">
+                <img id="klogo-img" ${c.logo ? `src="${esc(c.logo)}"` : 'hidden'} alt="">
+                <b id="klogo-in" ${c.logo ? 'hidden' : ''}>${esc((c.kitchenName||'م').trim()[0]||'م')}</b>
+              </span>
+              <button class="klogo-btn" onclick="pickKitchenLogo()" aria-label="${t('upload_logo')}"><i class="ph-bold ph-pencil-simple"></i></button>
+            </span>
+            <div><div class="p-name">${esc(chefName(c))}</div>
+            <span class="chip chip-terra" dir="ltr" style="margin-top:4px"><i class="ph ph-phone"></i>${m.phone}</span></div>
+          </div>
+          <div class="stack">
+            <label class="fld">${t('kitchen_name')}<input id="kf-name" class="inp" value="${esc(c.kitchenName)}"></label>
+            <label class="fld">${t('kitchen_name_en')}<input id="kf-name-en" class="inp" dir="ltr" value="${esc(c.kitchenNameEn||'')}"></label>
+            <label class="fld">${t('kitchen_bio')}<input id="kf-bio" class="inp" value="${esc(c.bio||'')}"></label>
+            <label class="fld">${t('kitchen_addr')}<input id="kf-addr" class="inp" value="${esc(c.address||'')}"></label>
+          </div>
+          <div class="co-nav">
+            <button class="btn" onclick="saveKitchen()"><i class="ph-bold ph-check"></i>${t('save_kitchen')}</button>
+            <button class="btn btn-ghost" onclick="logout()"><i class="ph-bold ph-sign-out"></i>${t('logout')}</button>
+          </div>
+        </div>
+        <div class="card p-card">
+          <h4 class="mini-title"><i class="ph-fill ph-fork-knife"></i>${t('add_dish')}</h4>
+          <div class="stack">
+            <div style="display:flex;gap:14px;align-items:center">
+              <img id="dish-prev" ${dishImg ? `src="${dishImg}"` : 'hidden'} alt="" style="width:64px;height:64px;border-radius:12px;border:2px solid var(--ink);object-fit:cover">
+              <button class="btn btn-sm btn-ghost" onclick="pickDishImg()"><i class="ph-bold ph-upload-simple"></i>${t('dish_img')}</button>
+            </div>
+            <div class="f2">
+              <label class="fld">${t('dish_name')}<input id="d-name" class="inp"></label>
+              <label class="fld">${t('dish_name_en')}<input id="d-name-en" class="inp" dir="ltr"></label>
+            </div>
+            <div class="f2">
+              <label class="fld">${t('dish_price')}<input id="d-price" class="inp" type="number" min="1" dir="ltr"></label>
+              <label class="fld">${t('dish_desc')}<input id="d-desc" class="inp"></label>
+            </div>
+          </div>
+          <div class="co-nav"><button class="btn" onclick="addDish()"><i class="ph-bold ph-plus"></i>${t('save_dish')}</button></div>
+        </div>
+      </div>
+      <div class="dash-col">
+        <div class="card p-card">
+          <h4 class="mini-title"><i class="ph-fill ph-cooking-pot"></i>${t('my_dishes')}</h4>
+          ${c.dishes.length ? c.dishes.map(d=>`
+            <div class="d-row">
+              <img src="${esc(d.img || FALLBACK)}" alt="" onerror="this.src='${FALLBACK}'">
+              <div class="d-info"><div class="d-name" style="font-size:1rem">${esc(dishName(d))}</div><div class="c-kitchen">${d.price} ${t('egp_cur')}</div></div>
+              <button class="del" onclick="delDish('${d.id}')" aria-label="${t('dish_deleted')}"><i class="ph-bold ph-trash"></i></button>
+            </div>`).join('') : `<p style="color:var(--ink2);font-size:.88rem">${t('no_dishes')}</p>`}
+        </div>
+        <div>
+          <h4 class="mini-title"><i class="ph-fill ph-fire"></i>${t('incoming')}</h4>
+          ${incoming.length ? incoming.slice(0,3).map(chefOrderCard).join('') + `<button class="btn btn-sm btn-ghost" onclick="go('orders')">${t('view_all')}</button>`
+            : `<div class="card" style="padding:24px;text-align:center;color:var(--ink2)">${t('no_orders')}</div>`}
+        </div>
+      </div>
+    </div>`;
+}
+function pickKitchenLogo(){
+  pickImage(r=>{
+    pendKLogo = r;
+    const i = $('#klogo-img'), n = $('#klogo-in');
+    if(i){ i.src = r; i.hidden = false; } if(n) n.hidden = true;
+  }, 300, .8);
+}
+function saveKitchen(){
+  const c = myChef(); if(!c) return;
+  const name = ($('#kf-name')?.value || '').trim();
+  if(!name){ toast(t('fill_required'), 'ph-warning'); return; }
+  c.kitchenName = name;
+  c.kitchenNameEn = ($('#kf-name-en')?.value || '').trim();
+  c.bio = ($('#kf-bio')?.value || '').trim();
+  c.address = ($('#kf-addr')?.value || '').trim();
+  if(pendKLogo) c.logo = pendKLogo;
+  persist(); toast(t('profile_saved'), 'ph-check-circle');
+  pendKLogo = null; renderProfile();
+}
+function pickDishImg(){
+  pickImage(r=>{
+    dishImg = r;
+    const p = $('#dish-prev'); if(p){ p.src = r; p.hidden = false; }
+  }, 640, .72);
+}
+function addDish(){
+  const c = myChef(); if(!c) return;
+  const name = ($('#d-name')?.value || '').trim();
+  const price = parseFloat($('#d-price')?.value);
+  if(!name || !(price > 0)){ toast(t('fill_required'), 'ph-warning'); return; }
+  c.dishes.push({id:'d' + Date.now(), name, nameEn:($('#d-name-en')?.value || '').trim(), desc:($('#d-desc')?.value || '').trim(), price, img:dishImg || null});
+  dishImg = null; persist(); toast(t('dish_added'), 'ph-cooking-pot');
+  renderProfile();
+}
+function delDish(id){
+  const c = myChef(); if(!c) return;
+  c.dishes = c.dishes.filter(d => d.id !== id);
+  persist(); toast(t('dish_deleted'), 'ph-trash'); renderProfile();
+}
+
+/* =========== البداية =========== */
+applyI18n();
+updateHeader();
+updateBadges();
+go('home');
+</script>
+</body>
+</html>
